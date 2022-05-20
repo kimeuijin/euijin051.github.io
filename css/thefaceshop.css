@@ -1,0 +1,466 @@
+@charset "UTF-8";
+
+
+
+.confix {
+    position: relative;
+    width: 1200px; /* 그리드 시스템사이즈 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 0 15px; /*그리드 시스템 좌우 마진 영역의 크기*/
+    /* background-color: brown; */
+} 
+
+/* header area */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 285px;
+    background: url(../images/head_back.jpg) top center no-repeat;
+    background-size: cover;
+}
+
+
+.header-flex-box {
+    display: flex; 
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.left-menu ul {
+    display: flex;
+    margin-top: 57px;
+}
+
+.left-menu li a {
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    border-right: 1px solid white;
+    padding-right: 20px;
+    padding-left: 20px;
+ 
+}
+
+.left-menu li:first-child a {
+    padding-left: 0;
+}
+
+.left-menu li:last-child a {
+    border-right: none;
+}
+
+.left-menu li a:hover,
+.right-menu li a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.right-menu ul{
+    display: flex;
+    margin-top: 60px;
+}
+
+.right-menu li a {
+    font-weight: 600;
+    font-size: 12px;
+    color: white;
+    padding-left: 12px;
+}
+
+/* main-menu */
+.main-menu {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #3d2e0b; 
+}
+
+.main-menu .gnb {
+    display: flex;
+}
+
+
+.main-menu .gnb > li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.main-menu .gnb > li > a {
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+    border-right: 1px solid #aa8e79;
+    color: #ffffff;
+    padding: 0 20;
+} 
+
+.main-menu .gnb > li:first-child > a {
+    width: 185px;
+}
+
+.main-menu .gnb > li:last-child > a {
+    width: 185px;
+    border-right: none;
+}
+
+
+.main-menu .gnb> li >a:hover {
+    color: rgb(114, 93, 93);
+}
+
+/* main area*/
+.contant-menu ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 3;
+    /* display: flex; */
+    width: 800px;
+    margin: 32px auto 34px;
+}
+
+.contant-menu li a {
+    width: 200px;
+    text-align: center;
+    border: 1px solid black;
+    border-right: 0;
+    padding: 10px;
+}
+
+.contant-menu li:last-child a {
+    border-right: 1px solid black;
+}
+
+
+.contant-menu li a:hover {
+    color: white;
+    background-color: #aa8e79;
+}
+
+
+
+/*silde */
+.silde img {
+    width: 100%;
+}
+
+/* bi */
+
+.bi {
+    margin-top: 52px;
+}
+
+.bi p {
+    width: 900px;
+    margin: 20px auto 35px ;
+    text-align: center;
+}
+
+.bi-img-text {
+    position: absolute;
+    left: 160px;
+    top: 230px;
+    width: 900px;
+    text-align: center;
+    line-height: 22px;
+}
+
+/* bi-des */
+.bi-des {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3d2e0b;
+}
+
+
+.bi-des div {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 150px;
+    margin-top: 30px;
+}
+
+.bi-des p {
+    width: 70%;
+    text-align: justify;
+    line-height: 1.2em;
+    /* background-color: yellow; */
+}
+
+/* row-meterial */
+
+.row-meterial {
+    margin-top: 113px;
+}
+
+.row-meterial p {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.row-list {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: minmax(100px auto);
+    grid-column: 20px;
+    grid-row: 20px;
+    margin-bottom: 100px;
+    /* display: flex; */
+    /* justify-content: space-between;
+    flex-wrap: wrap; */
+}
+
+.row-list .rowbox {
+    display: flex;
+    justify-content: space-between;
+    /* width: 49.5%; */
+    height: 258px;
+    /* margin-bottom: 12px; */
+    border: 1px solid black;
+}
+
+
+.row-list .row-text-box {
+    position: relative;
+    width: 55%;
+    padding: 10px;
+}
+
+.row-list .row-text-box p {
+    text-align: justify;
+}
+
+.row-list .row-text-box .product {
+    position: absolute;
+    bottom: 15px;
+    font-size: 14px;
+    color: #b98958;
+    font-size: 14px;
+}
+
+
+/* footer area */
+.footer {
+    width: 100%;
+    height: 287px;
+}
+
+.footer-menu {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+/* flex-menu-box */
+.flex-menu-box {
+    display: flex;
+    height: 50pxs;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: orange; */
+}
+
+/* footer-main-menu */
+.footer-main-menu {
+    width: 80%;
+    /* background-color: rgb(235, 145, 27); */
+}
+
+.footer-main-menu ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #3d2e0b; */
+}
+
+.footer-main-menu li {
+    padding: 10px 15px;
+}
+
+.footer-main-menu li:first-child {
+    padding-left: 0;
+}
+
+.footer-main-menu li > a {
+    font-size: 12px;
+}
+
+.footer-main-menu li > a:hover {
+    text-decoration: underline;
+}
+
+.footer-main-menu li:nth-child(odd) > a {
+    color: green;
+}
+
+.footer-main-menu li:nth-child(even) > a {
+    color: rgb(0, 0, 0);
+
+}
+
+#language {
+    color: #b98958;
+    border: none;
+    background-color: transparent;
+
+}
+
+
+/* sns */
+.sns {
+    width: 15%;
+    /* background-color: rgb(101, 152, 197); */
+}
+
+.sns ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns li {
+    width: 25px;
+    height: 25px;
+    /* margin-top: -10px; */
+    /* background-color: #eee56a; */
+}
+
+.sns li > a {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 4px; /* 텍스트의 수직 위치를 맞추려고*/
+    text-align: center;
+    border-radius: 50%; /*모서리를 둥글게 하기위해*/
+    background-color: rgb(168, 221, 118);
+}
+
+.sns li > a:hover {
+    color: azure;
+    background-color: black;   
+}
+
+/* flex-information-box */
+
+.flex-information-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 170px;
+}
+
+
+/* logo */
+/* .footer-logo{
+
+} */
+
+
+
+/* copyright */
+.contac-COPYRIGHT{
+    width: 55%;
+    /* background-color: aqua; */
+}
+
+.contac-COPYRIGHT p,
+.contac-COPYRIGHT address{    
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.contac-COPYRIGHT address{
+    font-style: normal;
+}
+
+
+/* .contac-COPYRIGHT .business,
+.contac-COPYRIGHT .tel{
+    /* color: orange; */
+ */
+
+/* security */
+.security {
+    width: 35%;
+    /* background-color: antiquewhite; */
+}
+
+.security h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.security p,
+.security .check {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.security .check {
+    margin-top: 15px;
+    color:#709d0e;
+}
+
+.bar {
+    position: absolute;
+    left: 760px;
+    width: 1px;
+    height: 170px;
+    /* background-color: rgb(255, 251, 5); */
+}
+
+/* footer-bottom */
+
+.footer-bottom {
+    width: 100%;
+    height: 70px;
+    background-color: #3d2e0b;
+}
+.footer-bottom p {
+    display: inline-block;
+    font-family: 바탕체;
+    font-weight: 600;
+    color: aliceblue;
+    line-height: 70px;
+}
+.footer-bottom h2 {
+    display: inline-block;
+    color: aliceblue;
+    margin-left: 150px;
+}
+
+/* fix-menu */
+.fix-menu {
+    position: fixed;
+    right: 400px;
+    bottom: 100px;
+}
+.fix-menu li a {
+    width: 90px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+}
+
+
+.fix-menu li:first-child a {
+    margin-bottom: 10px;
+    background-color: #709d0e;    
+}
+
+.fix-menu li:first-child a:hover,
+.fix-menu li:nth-child(2) a:hover {
+    color: rgb(255, 0, 0);
+}
+
+
+.fix-menu li:nth-child(2) a {
+    color:#b98958;
+    border:1px solid ;
+    background-color: white;
+}
+
+

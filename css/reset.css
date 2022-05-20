@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font: 16px "맑은 고딕";
+}
+
+ul,ol,li {
+    list-style: none;
+}
+
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 26px;
+
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #866144;
+}
+
+h3 {
+    font-size:18px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+
+header, nav, main, aside, article, section, footer {
+    display: block;
+}
