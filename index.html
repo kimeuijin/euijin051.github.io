@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="type" property="og:type" content="article">
+    <meta name="title" property="og:title" content="경복궁">
+    <meta name="images" property="og:image" content="./images/meta-image.jpg">
+    <meta name="description" property="og:description" content="경복궁">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>경복궁</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/slider.js"></script>
+  </head>
+  <body>
+    
+      <header>
+          <div class="header-mobile">
+              <div class="header-flex-box">
+                  <h1 class="logo">
+                      <img src="./images/logo_wt.svg" alt="main-logo">
+                  </h1> <!-- logo -->
+                  <div class="hamburger">
+                    <span>MENU</span>
+                      <input type="checkbox" id="menu">
+                      <label for="menu">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </label>
+                  </div> <!-- hamburger -->
+              </div> <!-- header-flex-box -->
+              
+              <div class="mobilemenu">
+                  <ul class="mobile-gnb">
+                      <li class="sh-logo">
+                        <img src="./images/logo-shape.svg" alt="">
+                      </li>
+      
+                      <li class="mobilemenu-history mobilemenu">
+                          <button class="accordion">역사 알기</button>
+                          <ul class="small-menu">
+                              <li><a href="./sub/history/history.html">경복궁의 역사</a></li>
+                              <li><a href="./sub/history/converse.html">알고싶은 이야기</a></li>
+                              <li><a href="./sub/history/restoration.html">복원사업에 관해</a></li>
+                          </ul> <!-- small-menu -->
+                      </li> <!-- mobilemenu-history -->
+                      
+                      <li class="mobilemenu-map mobilemenu">
+                          <a href="./sub/map/map.html">경복궁 지도</a>
+                      </li> <!-- mobilemenu-map -->
+                      
+                      <li class="mobilemenu-info mobilemenu">
+                          <button class="accordion">관람 안내</button>
+                          <ul class="small-menu">
+                              <li><a href="./sub/info/time-price.html">시간 및 요금</a></li>
+                              <li><a href="./sub/info/road.html">오시는 길</a></li>
+                              <li><a href="./sub/info/parking.html">주차 안내</a></li>
+                              <li><a href="./sub/info/explain.html">해설 안내</a></li>
+                          </ul> <!-- small-menu -->
+                      </li> <!-- mobilemenu-info -->
+      
+                      <li class="mobilemenu-event mobilemenu">
+                          <button class="accordion">행사 안내</button>
+                          <ul class="small-menu">
+                              <li><a href="./sub/event/alternating.html">수문장 교대의식</a></li>
+                              <li><a href="./sub/event/tasty.html">수라간 시식공감</a></li>
+                              <li><a href="./sub/event/star.html">별빛야행</a></li>
+                              <li><a href="./sub/event/saenggwabang.html">생과방</a></li>
+                          </ul> <!-- small-menu -->
+                      </li> <!-- mobilemenu-event -->
+                      
+                      <li class="mobilemenu-notice mobilemenu">
+                          <button class="accordion">소식 알림</button>
+                          <ul class="small-menu">
+                              <li><a href="./sub/notice/notice.html">공지사항</a></li>
+                              <li><a href="./sub/notice/faq.html">자주하는 질문</a></li>
+                              <li><a href="./sub/notice/inquire.html">1:1 문의하기</a></li>
+                          </ul> <!-- small-menu -->
+                      </li> <!-- mobilemenu-notice -->
+
+                      <li class="mobilemenu-onlypc mobilemenu">
+                        <button class="accordion">MyPage</button>
+                        <ul class="small-menu">
+                            <li><a href="./sub/mypage/login.html">로그인</a></li>
+                            <li><a href="./sub/mypage/mypage.html">내 정보</a></li>
+                            <li><a href="./sub/mypage/booking.html">예약·예매</a></li>
+                        </ul> <!-- small-menu -->
+                      </li> <!-- mobilemenu-notice -->
+
+                      <li class="close-btn">
+                        <a href="#">CLOSE &nbsp; X</a>
+                      </li>
+                      
+                      <li class="mobilemenu-box">
+                        <ul class="login-flex-box">
+                            <li class="mobilemenu-login mobilemenu">
+                                <a href="./sub/mypage/login.html">로그인</a>
+                            </li> <!-- mobilemenu-login -->
+                            
+                            <li class="mobilemenu-mypage mobilemenu">
+                                <a href="./sub/mypage/mypage.html">내 정보</a>
+                            </li> <!-- mobilemenu-mypage -->
+                            
+                            <li class="mobilemenu-reservation mobilemenu">
+                                <a href="./sub/mypage/booking.html">예약·예매</a>
+                            </li> <!-- mobilemenu-reservation -->
+                        </ul> <!-- login-flex-box -->
+                      </li> <!-- mobilemenu-box -->
+                  </ul> <!-- mobile-gnb -->
+              </div> <!-- mobilemenu -->
+          </div> <!-- header-mobile -->
+          <script src="./js/mobile-menu.js"></script>
+          
+      </header>
+
+      <div id="slide-nav">
+        <a href="#content1"
+          ><span>제일 위로 &nbsp;</span
+          ><img src="./images/arr_top.png" alt="위로가기"
+        /></a>
+        <a class="nav_list view" href="#content1"><span>고궁을 거닐다</span><span></span></a>
+        <a class="nav_list" href="#content2"><span>경복궁의 눈물</span><span></span></a>
+        <a class="nav_list" href="#content3"><span>복원30주년</span><span></span></a>
+        <a class="nav_list" href="#content4"><span>경복궁에 가려면</span><span></span></a>
+        <a class="nav_list" href="#content5"><span>경복궁 행사</span><span></span></a>
+        <a class="nav_list" href="#content6"><span>경복궁의 사계</span><span></span></a>
+        <a class="nav_list" href="#content6"><span>제일 아래로 &nbsp;</span><img src="./images/arr_bottom.png" alt="밑으로가기"
+        /></a>
+      </div>
+
+          <section id="content1">
+            <div class="more">
+              <img class="prev" src="./images/prev.svg" alt="prev" />
+              <img class="next" src="./images/next.svg" alt="next" />
+            </div>
+            <div id="intro">
+              <div class="move-box1">
+                  <div class="bg1"></div>
+                  <video preload="auto"  muted autoplay playsinline>
+                    <source src="./media/intro.mp4" type="video/mp4" />
+                  </video>
+                  <div class="txt-area">
+                    <div class="flex">
+                      <h2>景福&nbsp;</h2>
+                      <span>(경복)</span>
+                    </div>
+                    <p>
+                      “이미 술에 취하고 이미 덕에 배부르니<br>군자는 영원히 그 ‘큰
+                      복’(경복)을 도우리라”<br><br>
+                      <span>정 도 전</span>
+                    </p>
+                  </div>
+              </div><!--move-box-->
+                  
+              <div class="move-box2">
+                    <div class="txt-area">
+                      <h2>처음 전깃불을 밝힌곳</h2>
+                      <p>
+                        “ 개똥불로 글을 읽고<br>
+                        &nbsp; 눈빛으로 글을 읽던<br>
+                        &nbsp; 그 옛날 선비들은<br>
+                        &nbsp; 평생 불을 소원하였으리”<br><br>
+                        <span>- 1947년 전등 찬양시 중에서 -</span>
+                      </p>
+                    </div>
+              </div><!--move-box-->
+
+              <div class="move-box3">
+                    <div class="txt-area">
+                      <h2>경회루</h2>
+                      <p>
+                        1412년 태종은<br>
+                        경복궁의 연못을 크게 넓히고<br>
+                        섬 위에 경회루를 만들었다.
+                      </p>
+                    </div>
+              </div><!--move-box-->
+                  
+              <div class="move-box4">
+                    <div class="txt-area">
+                      <h2>고궁을 거닐다</h2>
+                      <p>
+                        600년전 시작되었던 찬란한 역사 속<br>조선 왕들의 공간으로!
+                      </p>
+                      <div class="scroll">
+                        <div class="txt">입장하기</div>
+                        <ul>
+                          <li><img src="./images/arr_bottom.png" alt="밑으로가기"
+                            /></li>
+                          <li></li>
+                        </ul>
+                        
+                      </div>
+                    </div>
+              </div><!--move-box-->
+            </div>
+            <!--intro-->
+          </section> <!--content1-->
+
+          <section id="content2">
+            <div class="txt-center">
+              <h2>역사속으로</h2>
+              <p>
+                경복궁이 우리 앞에 당당히 있기까지는 수많은 우여곡절을
+                거쳐야했습니다.<br>
+                조선의 개국과 함께 첫 궁궐로 세워졌으나<br>
+                역사의 소용돌이속에서 불타고 스러지며 다시 세워지기까지<br>
+                경복궁에는 많은 눈물이 있었습니다.<br>
+                그 생생한 이야기들을 지금 들려드립니다.
+              </p>
+              <div class="detailview"><a href="./sub/history/history.html">자세히 보기</a></div>
+            </div>
+            <video preload="auto" muted autoplay loop>
+              <source src="./media/fire.mp4" type="video/mp4" />
+            </video>
+          </section><!--content2-->
+
+          <section id="content3">
+            <div class="txt-center">
+              <h2>경복궁 복원 30주년</h2>
+              <div>일제가 훼손한 상징을 되찾다</div>
+            </div>
+            <div class="more">
+              <img class="prev" onclick="restore.prev()" src="./images/prev.svg" alt="prev" />
+              <img class="next" onclick="restore.next()" src="./images/next.svg" alt="next" />
+            </div>
+            <div id="restore-view">
+              <div class="slider">
+                <div class="restore">
+                  <div class="restore-txt">
+                    <div class="year">1592</div>
+                    <div class="title">임진왜란</div>
+                    <p>
+                      경복궁은 조선 개국 직후인 1395년 세워져 200년간 조선 왕조를
+                      상징하는 법궁으로 자리잡았으나, 1592년 임진왜란 때 완전히 불에
+                      타 폐허가 되었습니다.
+                    </p>
+                  </div>
+                  <div class="restore-img img01">
+                    <div class="tooltip">
+                      임진왜란 이후 제작된<br>
+                      경복궁전도
+                    </div>
+                  </div>
+                </div><!--#restore-->
+                
+                <div class="restore">
+                  <div class="restore-txt">
+                    <div class="year">1863</div>
+                    <div class="title">흥선대원군 중건</div>
+                    <p>
+                      고종이 즉위하자 정권을 잡게 된 흥선대원군은 왕실의 존엄성을
+                      내세우기 위해 임진왜란 때 타버린 후 방치되어있던 경복궁 중건에
+                      착수하여 1872년 완공하였습니다.
+                    </p>
+                  </div>
+                  <div class="restore-img img02">
+                    <div class="tooltip">
+                      1873년 향원지 북쪽에 지어진<br>
+                      건청궁의 모습
+                    </div>
+                  </div>
+                </div><!--#restore-->
+                
+                <div class="restore">
+                  <div class="restore-txt">
+                    <div class="year">1910</div>
+                    <div class="title">일제강점기 훼손</div>
+                    <p>
+                      일제는 침략후 전각을 허물고 팔아넘기며, 으뜸이 되는
+                      건축물인 근정전 앞에 조선총독부 청사를 지었습니다. 기존에
+                      500여 동이던 건물은 36동만 남게되었습니다.
+                    </p>
+                  </div>
+                  <div class="restore-img img03">
+                    <div class="tooltip">한국전쟁직후 경복궁 전경</div>
+                  </div>
+                </div><!--#restore-->
+  
+                <div class="restore">
+                  <div class="restore-txt">
+                    <div class="year">1991</div>
+                    <div class="title">1차 복원 시작</div>
+                    <p>
+                      훼손된 경복궁의 원형을 복원하고자 시작된 1차 복원사업으로 새롭게
+                      모습을 드러낸 건물은 모두 89동이었습니다. 2010년 광복절에 이뤄진
+                      광화문 공개는 1차 복원 사업의 백미였습니다.
+                    </p>
+                  </div>
+                  <div class="restore-img img04">
+                    <div class="tooltip">
+                      1차 복원을 마친<br>
+                      경복궁의 모습
+                    </div>
+                  </div>
+                </div><!--#restore-->
+                
+                <div class="restore">
+                  <div class="restore-txt">
+                    <div class="year">2045</div>
+                    <div class="title">2차 복원중</div>
+                    <p>
+                      2011년부터 2차 복원계획에 따라 80동 건물과 223동
+                      기단·초석 및 유구 등이 총 5단계에 걸쳐 복원되며 이미 1단계로
+                      소주방, 흥복전 영역이 복원되었고 2019년부터 2단계가 진행중입니다.
+                    </p>
+                  </div>
+                  <div class="restore-img img05">
+                    <div class="tooltip">
+                      우측에 복원된<br>
+                      소주방 영역이 보인다.
+                    </div>
+                  </div>
+                </div><!--#restore-->
+              </div>
+              
+            </div><!--restore-view-->
+            
+          </section><!--content3-->
+          
+          <section id="content4" class="txt-area">
+            <div class="map-guide">
+              <a href="./sub/map/map.html">
+                <div class="box">
+                  <div class="tooltip">GO!</div>
+                  <div class="map_img"></div>
+                </div> 
+              </a>
+              <h4>경복궁 가이드맵</h4>
+              <div class="txt">
+                전각들의 위치별 정보 /  복원구역  / 편의 시설의  위치를
+                한눈에 확인할 수있습니다. 
+              </div>
+            </div>
+
+            <div class="map-info">
+              <a href="./sub/info/time-price.html">
+                <div class="box">
+                    <div class="tooltip">GO!</div>
+                    <div class="map_img"></div>
+                </div> 
+              </a>
+              <h4>경복궁에 가려면</h4>
+              <div class="txt">
+                방문하기 전에 중요한 사항과  정보들을 확인하세요
+              </div>
+              <button class="button1" onclick="location.href='./sub/mypage/booking.html';">온라인예약·예매 바로가기</button>
+            </div>
+          </section><!--content4-->
+          
+          <section id="content5">
+            <div class="more">
+              <img class="prev" onclick="poster.prev()" src="./images/prev.svg" alt="prev" />
+              <img class="next" onclick="poster.next()" src="./images/next.svg" alt="next" />
+            </div>
+            <div id="poster-view">
+              <ul class="slider">
+                <li class="view"><a href="/sub/event/star.html">&nbsp;</a></li>
+                <li><a href="/sub/event/saenggwabang.html">&nbsp;</a></li>
+                <li><a href="/sub/event/tasty.html">&nbsp;</a></li>
+                <li><a href="#none">&nbsp;</a></li>
+              </ul>
+            </div> <!--event-area-->
+            <div id="event-hover">
+              <div class="event-guide star">
+                <div class="event-schedule">
+                  <table>
+                    <colgroup>
+                      <col style="width: 50px" />
+                      <col />
+                    </colgroup>
+                    <tr>
+                      <td>· 일정 :</td>
+                      <td>
+                        05월 18일(금) ~ 05월 29일(일)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>· 시간 :</td>
+                      <td>1회 18:40~20:30 | 2회 19:40~21:30</td>
+                    </tr>
+                    <tr>
+                      <td>· 예매 :</td>
+                      <td>추첨제(1인 60,000원)</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="summary">
+                  <div class="title">
+                    <h2>별빛야행</h2>
+                    <span class="detailview"><a href="./sub/event/star.html">자세히 보기</a></span>
+                  </div>
+                  <p>
+                    하늘을 아름답게 수놓은
+                    별빛과 함께
+                    경복궁에 불이 켜졌습니다. 
+                    은은하게 밝힌 조명아래 꽃이 흐드러지게 핀 고궁의 길을
+                    걷다보면
+                    마치 오랜 옛날 조선의 왕들의 야행처럼
+                    우리도 복잡한 생각들을 내려 놓을 수 있게 될 것입니다.<br>
+                    고즈넉한 조선의 밤, 그날의 시공간으로 여러분을 초대합니다.
+                  </p>
+                </div>
+              </div><!--event-guide-->
+              <div class="event-guide saenggwabang">
+                <div class="event-schedule">
+                  <table>
+                    <colgroup>
+                      <col style="width: 50px" />
+                      <col />
+                    </colgroup>
+                    <tr>
+                      <td>· 일정 :</td>
+                      <td>
+                        매년 상/하반기
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>· 시간 :</td>
+                      <td>10:00 ~ 16:00</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="summary">
+                  <div class="title">
+                    <h2>생과방</h2>
+                    <span class="detailview"><a href="./sub/event/saenggwabang.html">자세히 보기</a></span>
+  
+                  </div>
+                  <p>
+                    경복궁 소주방 전각에 위치한 ‘생과방’은 궁중의 육처소(六處所) 가운데 하나이며,
+                    ‘국왕과 왕비’의 후식과 별식을 준비하던 곳으로 ‘생물방’ 혹은 ‘생것방’이라고도 불렸습니다.
+                    경복궁 생과방 프로그램은 조선왕조실록의 내용을 토대로 실제 임금이 먹었던 궁중병과와 궁중약차를
+                    오늘날에도 즐길 수 있도록 구성된 유료 체험 프로그램 입니다.
+                  </p>
+                </div>
+              </div><!--event-guide-->
+              <div class="event-guide tasty">
+                <div class="event-schedule">
+                  <table>
+                    <colgroup>
+                      <col style="width: 50px" />
+                      <col />
+                    </colgroup>
+                    <tr>
+                      <td>· 일정 :</td>
+                      <td>
+                        06. 08(수) - 06. 20(월)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>· 시간 :</td>
+                      <td>16:00 - 21:00(3시간)</td>
+                    </tr>
+                    <tr>
+                      <td>· 예매 :</td>
+                      <td>추첨제(1인 2,5000원)</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="summary">
+                  <div class="title">
+                    <h2>시식공감</h2>
+                    <span class="detailview"><a href="./sub/event/tasty.html">자세히 보기</a></span>
+  
+                  </div>
+                  <p>
+                    視(시) 경복궁 소주방에서
+                    食(식) 궁중병과와 함께
+                    公(공) 궁중음악을 들으며
+                    感(감) 감동을 느껴보는 궁중음식문화 체험 프로그램입니다.<br>
+                    오직 시식공감에서만 즐길 수 있는
+                    ‘밤의 생과방’, 그리고 ‘식도락 x 시식공감’ 과 ‘주방골목’ 등의 다양한 프로그램을 통해 더 없이 완벽한 소주방의 여름밤을 선물합니다.
+                  </p>
+                </div>
+              </div><!--event-guide-->
+              <div class="event-guide alternating">
+                <div class="event-schedule">
+                  <table>
+                    <colgroup>
+                      <col style="width: 50px" />
+                      <col />
+                    </colgroup>
+                    <tr>
+                      <td>· 일정 :</td>
+                      <td>
+                        상시 진행
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>· 시간 :</td>
+                      <td>10:00, 14:00(소요시간 20분)</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="summary">
+                  <div class="title">
+                    <h2>수문장 교대의식</h2>
+                    <span class="detailview"><a href="./sub/event/alternating.html">자세히 보기</a></span>
+  
+                  </div>
+                  <p>
+                    경복궁 수문장 교대의식은 조선시대 왕실 호위문화를 상징하는 대표적인 전통문화행사입니다.
+                    ‘조선왕조실록’예종(睿宗) 1년(1469) 수문장제도의 시행 기록을 역사적 근거로 하여
+                    재구성된 이 행사는 당시의 복식 및 무기 등을 복원하여
+                    조선 전기(前期) 군인들의 모습을 생생하게 재현하는 것에 초점을 맞추고 있습니다.
+                  </p>
+                </div>
+              </div><!--event-guide-->
+              <button class="button1" onclick="location.href='./sub/mypage/booking.html';">온라인예약·예매 바로가기</button>
+            </div><!--event-hover-->
+
+          </section><!--content5-->
+          
+          <section id="content6">
+            <div class="more">
+              <img class="prev" onclick="gallery.prev()" src="./images/prev.svg" alt="prev" />
+              <img class="next" onclick="gallery.next()" src="./images/next.svg" alt="next" />
+            </div>
+
+            <div id="gallery-view">
+              <div class="spring">
+                <img src="./images/gallery/spring01.jpg" alt="자경전">
+                <img src="./images/gallery/spring02.jpg" alt="향원정">
+                <img src="./images/gallery/spring03.jpg" alt="아미산굴뚝">
+                <img src="./images/gallery/spring04.jpg" alt="경복궁 벚꽃">
+                <img src="./images/gallery/spring05.jpg" alt="경복궁 벚꽃">
+                <img src="./images/gallery/spring06.jpg" alt="경복궁 봄">
+              </div>
+              <div class="summer slider">
+                <img src="./images/gallery/summer01.jpg" alt="아미산굴뚝 여름">
+                <img src="./images/gallery/summer02.jpg" alt="근정문">
+                <img src="./images/gallery/summer03.jpg" alt="건청궁 장안당">
+                <img src="./images/gallery/summer04.jpg" alt="집옥재">
+                <img src="./images/gallery/summer05.jpg" alt="창고">
+                <img src="./images/gallery/summer06.jpg" alt="홍경문">
+              </div>
+              <div class="fall">
+                <img src="./images/gallery/fall01.jpg" alt="건춘문">
+                <img src="./images/gallery/fall02.jpg" alt="경복궁 가을1">
+                <img src="./images/gallery/fall03.jpg" alt="경복궁 가을2">
+                <img src="./images/gallery/fall04.jpg" alt="경복궁 가을3">
+                <img src="./images/gallery/fall05.jpg" alt="향원정 가을4">
+                <img src="./images/gallery/fall06.jpg" alt="향원정 가을5">
+              </div>
+              <div class="winter">
+                <img src="./images/gallery/winter01.jpg" alt="향원정 설경">
+                <img src="./images/gallery/winter02.jpg" alt="자경전 설경">
+                <img src="./images/gallery/winter03.jpg" alt="함화당 설경">
+                <img src="./images/gallery/winter04.jpg" alt="향원정 설경">
+                <img src="./images/gallery/winter05.jpg" alt="경회루 설경">
+                <img src="./images/gallery/winter06.jpg" alt="자경전 설경">
+              </div>
+            </div>
+            <div class="gallery-nav">
+              <div class="line"> 경복궁의 사계 </div>
+              <div class="season">
+                <a href="#none"><div><span></span>봄</div></a>
+                <a class="view" href="#none"><div><span></span>여름</div></a>
+                <a href="#none"><div><span></span>가을</div></a>
+                <a href="#none"><div><span></span>겨울</div></a>
+              </div> 
+            </div>
+          </section><!--content6-->
+
+      <footer>
+          <div class="wrapper">
+              <div class="policy">
+                  <ul>
+                      <li><a href="./../service/privacy.html">개인정보처리방침</a></li>
+                      <li><a href="./../service/copyright.html">저작권정책</a></li>
+                      <li><a href="https://www.cha.go.kr/cop/bbs/selectBoardNameCheck.do?bbsId=BBSMSTR_1049&checkType=regist" target="_blank">개인정보침해신고센터</a></li>
+                  </ul>
+              </div> <!-- policy -->
+              
+              <div class="copyright">
+                  <div class="footer-logo">
+                      <img src="./../../images/logo.svg" alt="footer-logo">
+                  </div>
+                  <div class="contact">
+                      <p>문화재청 경복궁</p>
+                      <p>우)03045 서울특별시 종로구 사직로 161<br>전화번호 (02) 3700-3900 팩스 (02) 3700-3909</p>
+                      <p>COPYRIGHT 2022 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                  </div>
+              </div> <!-- copyright -->
+          </div>
+      </footer>
+  </body>
+</html>

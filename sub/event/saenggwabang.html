@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" property="og:title" content="경복궁">
+    <meta name="images" property="og:image" content="./../../images/meta-image.jpg">
+    <meta name="description" property="og:description" content="수라간 시식공감">
+    <meta name="type" property="og:type" content="article">
+    <meta name="Author" content="jihee">
+    <link rel="stylesheet" href="./css/saenggwabang.css" type="text/css">
+    <link rel="shortcut icon" href="./../../images/favicon.ico" type="image/x-icon">
+    <title>생과방</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/saenggwabang.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-mobile">
+            <div class="header-flex-box">
+                <h1 class="logo">
+                    <a href="./../../index.html"><img src="./../../images/logo_wt.svg" alt="main-logo"></a>
+                </h1> <!-- logo -->
+                <div class="hamburger">
+                    <input type="checkbox" id="menu">
+                    <label for="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div> <!-- hamburger -->
+            </div> <!-- header-flex-box -->
+            
+            <div class="mobilemenu">
+                <ul class="mobile-gnb">
+                    <li class="mobilemenu-home mobilemenu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li> <!-- mobilemenu-home -->
+    
+                    <li class="mobilemenu-history mobilemenu">
+                        <button class="accordion">역사 알기</button>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html">복원사업에 관해</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-history -->
+                    
+                    <li class="mobilemenu-map mobilemenu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li> <!-- mobilemenu-map -->
+                    
+                    <li class="mobilemenu-info mobilemenu">
+                        <button class="accordion">관람 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-info -->
+    
+                    <li class="mobilemenu-event mobilemenu selected">
+                        <button class="accordion">행사 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html" class="selected">생과방</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-event -->
+                    
+                    <li class="mobilemenu-notice mobilemenu">
+                        <button class="accordion">소식 알림</button>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-notice -->
+                    
+                    <li class="mobilemenu-box">
+                        <div class="login-flex-box">
+                            <ul>
+                                <li class="mobilemenu-login mobilemenu">
+                                    <a href="./../mypage/login.html">로그인</a>
+                                </li> <!-- mobilemenu-login -->
+                                
+                                <li class="mobilemenu-mypage mobilemenu">
+                                    <a href="./../mypage/mypage.html">내 정보</a>
+                                </li> <!-- mobilemenu-mypage -->
+                                
+                                <li class="mobilemenu-reservation mobilemenu">
+                                    <a href="./../mypage/booking.html">예약·예매</a>
+                                </li> <!-- mobilemenu-reservation -->
+                            </ul>
+                        </div> <!-- login-flex-box -->
+                    </li> <!-- mobilemenu-box -->
+                </ul> <!-- mobile-gnb -->
+            </div> <!-- mobilemenu -->
+        </div> <!-- header-mobile -->
+        <script src="./js/mobile-menu.js"></script>
+        
+        <ul class="topmenu"> <!-- 현재 페이지 li.menu 클래스에 selected 삽입 -->
+            <li class="submenu">
+                <a href="./../event/alternating.html">수문장 교대의식</a>
+            </li>
+            <li class="submenu">
+                <a href="./../event/tasty.html">수라간 시식공감</a>
+            </li>
+            <li class="submenu">
+                <a href="./../event/star.html">별빛야행</a>
+            </li>
+            <li class="submenu selected">
+                <a href="./../event/saenggwabang.html">생과방</a>
+            </li>
+        </ul> <!-- topmenu -->
+    </header>
+
+    <main>
+        <aside>
+            <div class="sidemenu">
+                <h1 class="header-logo">
+                    <a href="./../../index.html"><img src="./../../images/logo.svg" alt="main-logo"></a>
+                </h1>
+                <ul class="gnb"> <!-- 현재 페이지 li.menu 클래스에 selected 삽입 -->
+                    <li class="sidemenu-home menu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li> <!-- sidemenu-home -->
+    
+                    <li class="sidemenu-history menu">
+                        <a href="./../history/history.html">역사 알기</a>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html">복원사업에 관해</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-history -->
+    
+                    <li class="sidemenu-map menu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li> <!-- sidemenu-map -->
+    
+                    <li class="sidemenu-info menu">
+                        <a href="./../info/time-price.html">관람 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-info -->
+    
+                    <li class="sidemenu-event menu selected">
+                        <a href="./../event/alternating.html">행사 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html" class="selected">생과방</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-event -->
+    
+                    <li class="sidemenu-notice menu">
+                        <a href="./../notice/notice.html">소식 알림</a>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-notice -->
+    
+                    <li class="sidemenu-login menu">
+                        <a href="./../mypage/login.html">로그인</a>
+                    </li> <!-- sidemenu-login -->
+    
+                    <li class="sidemenu-mypage menu">
+                        <a href="./../mypage/">내 정보</a>
+                    </li> <!-- sidemenu-mypage -->
+    
+                    <li class="sidemenu-reservation menu">
+                        <a href="./../mypage/booking.html">예약·예매</a>
+                    </li> <!-- sidemenu-reservation -->
+                </ul> <!-- gnb -->
+            </div> <!-- sidemenu -->
+        </aside>
+
+        <section class="event">
+            <h2>생과방</h2>
+            <div class="img-text">
+                <img src="./images/saenggwabang-main.png" alt="생과방 메인이미지">
+                <div class="main-text">
+                    <h3>생과방</h3>
+                    <p>“ 예로부터 드물다는 나이에서도 이제 10년을 더하게 되었는데,<br>
+                        이는 건공탕 (建功湯)으로 지탱한 것이다. ”
+                    </p>
+                    <p class="person">
+                        - 영조 -
+                    </p>
+                </div><!--main-text-->
+            </div><!--img-text-->
+
+            <div class="wrapper-box">
+                <div class="info">
+                    <div class="line-flex">
+                        <div class="little-title">
+                            <h3>
+                                <span>
+                                    소개
+                                </span>
+                            </h3>
+                        </div>
+                    </div><!--line-flex-->
+    
+                    <div class="info-text-mobile">
+                        경복궁 소주방 전각에 위치한 ‘생과방’은 궁중의 육처소(六處所) 가운데 하나이며, ‘국왕과 왕비’의 후식과 별식을 준비하던 곳으로 ‘생물방’ 혹은 ‘생것방’이라고도 불렸습니다.<br /> 경복궁 생과방 프로그램은 조선왕조실록의 내용을 토대로 실제 임금이 먹었던 궁중병과와 궁중약차를 오늘날에도 즐길 수 있도록 구성된 유료 체험 프로그램 입니다.
+                    </div><!--info-text-mobile-->
+                    <div class="info-text-pc">
+                        경복궁 소주방 전각에 위치한 ‘생과방’은 궁중의 육처소(六處所) 가운데 하나이며,<br />‘국왕과 왕비’의 후식과 별식을 준비하던 곳으로 ‘생물방’ 혹은 ‘생것방’이라고도 불렸습니다.<br />경복궁 생과방 프로그램은 조선왕조실록의 내용을 토대로 실제 임금이 먹었던 궁중병과와 궁중약차를<br />오늘날에도 즐길 수 있도록 구성된 유료 체험 프로그램 입니다.
+                    </div><!--info-text-pc-->
+                </div> <!--info-->
+    
+                <div class="guide">
+                    <div class="line-flex">
+                        <div class="little-title">
+                            <h3>
+                                <span>안내</span>
+                            </h3>
+                        </div>
+                    </div><!--line-flex-->
+    
+                    <div class="guide-info">
+                        <div class="guide-flex">
+                            <div class="guide-box">
+                                <p>궁중병과</p>
+                            </div>
+                            <!-- 여기서부터 -->
+                            <div class="myModal" id="modalWindow">
+                                <div class="modal-one">
+                                    <div class="modalBox">
+                                        <h4>구선왕도고</h4>
+                                        <span class="closeBtn closeBtn1" title="Close image">&times;</span>
+                                        <h5>2022년 경복궁 생과방에서만 맛 볼 수 있는 <br />향기로운 떡입니다.</h5>
+                                        <div class="modal-flex">
+                                            <p>[ 재료 ] 마, 잣, 금귤, 연근, 꿀, 식용금박 <br />
+                                                마를 쪄서 꿀에 담갔다가 찹쌀가루를 입혀 기름에 지져낸 후 잣고물을 묻힌 떡.
+                                            </p>
+                                            <div class="imgBox"> 
+                                                <img src="./images/snack1.jpg" alt="s1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-two">
+                                    <div class="modalBox">
+                                        <h4>호두정과</h4>
+                                        <span class="closeBtn closeBtn2" title="Close image">&times;</span>
+                                        <h5>각종 영양이 가득하여 건강에 좋을 뿐 아니라 <br />어린이들의 두뇌 발달에 좋은 별식입니다.</h5>
+                                        <div class="modal-flex">
+                                            <p>[ 재료 ] 마, 잣, 금귤, 연근, 꿀, 식용금박 <br />
+                                                꿀에 호두를 넣어 조린 뒤 노릇하게 튀겨낸 전통 과자.
+                                            </p>
+                                            <div class="imgBox"> 
+                                                <img src="./images/snack2.jpg" alt="s2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-three">
+                                    <div class="modalBox">
+                                        <h4>매작과</h4>
+                                        <span class="closeBtn closeBtn3" title="Close image">&times;</span>
+                                        <h5>'매화나무에 참새가 앉아 있는 형상의 한과'라는 의미로 궁중에서는 매엽과(梅葉菓)라고 불렸습니다.</h5>
+                                        <div class="modal-flex">
+                                            <p>[ 재료 ] 밀가루, 땅콩가루, 물엿, 설탕, 콩기름, 꿀, 소주, 소금 <br />
+                                                밀가루를 납작하게 밀어 자르고, 뒤집어 모양을 내 기름에 튀긴 후 땅콩가루를 묻힌 한과
+                                            </p>
+                                            <div class="imgBox"> 
+                                                <img src="./images/snack3.jpg" alt="s3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-four">
+                                    <div class="modalBox">
+                                        <h4>사과정과</h4>
+                                        <span class="closeBtn closeBtn4" title="Close image">&times;</span>
+                                        <h5>정과는 조선시대 장국상·큰상, 제례음식에 <br />반드시 쓰인 전통과자 입니다. </h5>
+                                        <div class="modal-flex">
+                                            <p>[ 재료 ] 사과, 설탕 <br />
+                                                사과를 쪄 설탕을 뿌려 물기를 빼고, 채반에 널어 말린 정과
+                                            </p>
+                                            <div class="imgBox"> 
+                                                <img src="./images/snack4.jpg" alt="s4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-five">
+                                    <div class="modalBox">
+                                        <h4>주악</h4>
+                                        <span class="closeBtn closeBtn5" title="Close image">&times;</span>
+                                        <h5>조선시대 귀한 손님이 왔을 때 다과상에 꼭 올라가던 음식입니다.</h5>
+                                        <div class="modal-flex">
+                                            <p>[ 재료 ] 찹쌀, 소금, 밀가루, 막걸리, 설탕, 대추, 생강, 조청<br />
+                                                불린 찹쌀을 소금으로 간하고 빻아 체에 내린 후 설탕, 끓인 막걸리와 함께 반죽해 치대서 만든 떡
+                                            </p>
+                                            <div class="imgBox"> 
+                                                <img src="./images/snack5.jpg" alt="s5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-six">
+                                    <div class="modalBox">
+                                        <h4>약과</h4>
+                                        <span class="closeBtn closeBtn6" title="Close image">&times;</span>
+                                        <h5>약이 되는 과자라는 뜻으로 [조선상식]에서는 <br />'조선에서 만드는 과자 가운데 가장 온 정성을 들여 만드는 과자'로 극찬하였습니다.</h5>
+                                        <div class="modal-flex">
+                                            <p>[ 재료 ] 꿀, 청주, 생강, 조청 <br />
+                                                밀가루에 소금, 설탕으로 간하고 청주와 생각을 넣어 반죽한 뒤 튀긴 과자
+                                            </p>
+                                            <div class="imgBox"> 
+                                                <img src="./images/snack6.jpg" alt="s6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-seven">
+                                    <div class="modalBox">
+                                        <h4>강계다음</h4>
+                                        <span class="closeBtn closeBtn7" title="Close image">&times;</span>
+                                        <h5>다음(茶飮)은 약으로 쓰는 재료를 차처럼 가볍게 마실 수 있게 만든 음료입니다. 평소 건강관리나 기운을 보충할 목적으로 사용했으며, 영조임금이 승하직전 몸의 온기를 되살기기 위해 드셨다고 합니다.</h5>
+                                        <div class="modal-flex">
+                                            <p>[ 재료 ] 생강, 계피, 귤피, 대추</p>
+                                            <div class="imgBox"> 
+                                                <img src="./images/tea1.jpg" alt="t1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-eight">
+                                    <div class="modalBox">
+                                        <h4>담강다</h4>
+                                        <span class="closeBtn closeBtn8" title="Close image">&times;</span>
+                                        <h5>동의보감에서 생강은 담을 없애고 기를 내린다고 기록되어 있습니다. 소화불능을 앓던 순조 임금의 건강을 위해 조선 왕실에서 소화를 돕는 목적으로 즐겨 마셨습니다.</h5>
+                                        <div class="modal-flex">
+                                            <p>[ 재료 ] 생강, 꿀</p>
+                                            <div class="imgBox"> 
+                                                <img src="./images/tea2.jpg" alt="t2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-nine">
+                                    <div class="modalBox">
+                                        <h4>감국다</h4>
+                                        <span class="closeBtn closeBtn9" title="Close image">&times;</span>
+                                        <h5>감국은 황국이라고도 하며 승정원일기에 따르면 숙종과 영조가 건강을 위해 곁에 두고 마셨는데 주로 화가 날 때 마음을 차분히 가라앉히고자 마셨습니다.</h5>
+                                        <div class="modal-flex">
+                                            <p>[ 재료 ] 국화, 구기자</p>
+                                            <div class="imgBox"> 
+                                                <img src="./images/tea3.jpg" alt="t3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-ten">
+                                    <div class="modalBox">
+                                        <h4>삼귤다</h4>
+                                        <span class="closeBtn closeBtn10" title="Close image">&times;</span>
+                                        <h5>기의 흐름을 순조롭게 하는 귤껍질에 인삼을 더한 차로 병을 다스리기도 했다는 기록이 남아 있을 만큼 귤껍질은 조선시대 내내 주요 약재로 사용되었습니다.</h5>
+                                        <div class="modal-flex">
+                                            <p>[ 재료 ] 인삼, 귤피, 대추</p>
+                                            <div class="imgBox"> 
+                                                <img src="./images/tea5.jpg" alt="t4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-elev">
+                                    <div class="modalBox">
+                                        <h4>제호차</h4>
+                                        <span class="closeBtn closeBtn11" title="Close image">&times;</span>
+                                        <h5>속을 따듯하게 하는 효과가 있어 겉은 뜨겁고 속은 차가워지기 쉬운 여름철에 좋은 차입니다. 정조 임금이 여름철에 신하들을 위해 제호탕을 하사한 기록이 있습니다.</h5>
+                                        <div class="modal-flex">
+                                            <p>[ 재료 ] 인삼, 귤피, 대추</p>
+                                            <div class="imgBox"> 
+                                                <img src="./images/tea6.jpg" alt="t5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-twel">
+                                    <div class="modalBox">
+                                        <h4>오미자</h4>
+                                        <span class="closeBtn closeBtn12" title="Close image">&times;</span>
+                                        <h5>신맛, 쓴맛, 단맛, 아린맛, 짠맛의 다섯가지 맛을 가지고 있다는 뜻의 오미자는 조선시대 중종의 갈증을 치료하기 위해 차로 만들어 올려졌던 약차입니다.</h5>
+                                        <div class="modal-flex">
+                                            <p> 재료 : 오미자</p>
+                                            <div class="imgBox"> 
+                                                <img src="./images/tea4.jpg" alt="t6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!--여기까지-->
+                            <div class="snack-list">
+                                <div class="imgC">
+                                    <img src="./images/snack1.jpg" alt="궁중병과1"  id="snack1">
+                                    <p>구선왕도고<br>
+                                    3,000원</p>
+                                    <span class="little-text">(한정판매 1일 40개)</span>
+                                </div>
+                                <div class="imgC">
+                                    <img src="./images/snack2.jpg" alt="궁중병과2"  id="snack2">
+                                    <p class="img-padding">호두정과<br>
+                                    1,000원</p>
+                                </div>
+                                <div class="imgC">
+                                    <img src="./images/snack3.jpg" alt="궁중병과3" id="snack3">
+                                    <p class="img-padding">매작과<br>
+                                    1,000원</p>
+                                </div>
+                                <div class="imgC">
+                                    <img src="./images/snack4.jpg" alt="궁중병과4" id="snack4">
+                                    <p class="img-padding">사과정과<br>
+                                    1,000원</p>
+                                </div>
+                                <div class="imgC">
+                                    <img src="./images/snack5.jpg" alt="궁중병과5" id="snack5">
+                                    <p class="img-padding">주악<br>
+                                    2,000원</p>
+                                </div>
+                                <div class="imgC">
+                                    <img src="./images/snack6.jpg" alt="궁중병과6" id="snack6">
+                                    <p class="img-padding">약과<br>
+                                    1,000원</p>
+                                </div>
+                            </div>
+                        </div> <!--guide-flex-->
+                        <div class="guide-flex">
+                            <div class="guide-box">
+                                <p>궁중약차</p>
+                            </div>
+                            <div class="tea-list">
+                                <div class="tlist01">
+                                    <img src="./images/tea1.jpg" alt="궁중약차1" id="tea1">
+                                    <p>강계다음<br>
+                                    5,000원</p>
+                                </div>
+                                <div class="tlist02">
+                                    <img src="./images/tea2.jpg" alt="궁중약차2" id="tea2">
+                                    <p>담강다<br>
+                                    4,000원</p>
+                                </div>
+                                <div class="tlist03">
+                                    <img src="./images/tea3.jpg" alt="궁중약차3" id="tea3">
+                                    <p>감국다<br>
+                                    4,000원</p>
+                                </div>
+                                <div class="tlist04">
+                                    <img src="./images/tea5.jpg" alt="궁중약차4" id="tea4">
+                                    <p>삼귤다<br>
+                                    4,000원</p>
+                                </div>
+                                <div class="tlist05">
+                                    <img src="./images/tea6.jpg" alt="궁중약차5" id="tea5">
+                                    <p>제호차<br>
+                                    4,000원</p>
+                                </div>
+                                <div class="tlist06">
+                                    <img src="./images/tea4.jpg" alt="궁중약차6" id="tea6">
+                                    <p>오미자<br>
+                                    4,000원</p>
+                                </div>
+                            </div><!--tea-list-->
+                        </div> <!--guide-flex-->
+                    </div> <!--guide-info-->
+                </div> <!--guide-->
+    
+                <div class="operation">
+                    <div class="line-flex">
+                        <div class="little-title">
+                            <h3>  
+                                <span>
+                                    운영기간
+                                </span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="operation-info">
+                        <div class="operation-term">
+                            <div class="operation-info-box">
+                                <p>기간</p>
+                            </div>
+                            <p class="info-center">매일<br>
+                            (휴무 : 매주 월요일, 눈올 때, 비올 때, 영하 5도 이하, 혹서기)</p>
+                        </div>
+                        <div class="operation-term">
+                            <div class="operation-info-box">
+                                <p>시간</p>
+                            </div>
+                            <p class="info-center">
+                                11:00, 14:00, 15:30<br>
+                                (1일 3회 진행, 소요시간은 20분 입니다.)
+                            </p>
+                        </div>
+                    </div>
+                </div><!--operation-->
+    
+                <div class="participate">
+                    <div class="line-flex">
+                        <div class="little-title">
+                            <h3>
+                                <span>참여방법</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <p>생과방 ‘호궤소’ 방문 → 궁중병과 및 약차 선택 → 좌석 배정 및 안내  → 다과시식 (시식시간은 1시간입니다.)   </p>
+                </div> <!--participate--> 
+            </div> <!--wrapper-box-->
+		</section> <!--event-->
+
+    </main>
+    <footer>
+        <div class="wrapper">
+            <div class="policy">
+                <ul>
+                    <li><a href="./../service/privacy.html">개인정보처리방침</a></li>
+                    <li><a href="./../service/copyright.html">저작권정책</a></li>
+                    <li><a href="https://www.cha.go.kr/cop/bbs/selectBoardNameCheck.do?bbsId=BBSMSTR_1049&checkType=regist" target="_blank">개인정보침해신고센터</a></li>
+                </ul>
+            </div> <!-- policy -->
+            
+            <div class="copyright">
+                <div class="footer-logo">
+                    <img src="./../../images/logo.svg" alt="footer-logo">
+                </div>
+                <div class="contact">
+                    <p>문화재청 경복궁</p>
+                    <p>우)03045 서울특별시 종로구 사직로 161<br>전화번호 (02) 3700-3900 팩스 (02) 3700-3909</p>
+                    <p>COPYRIGHT 2022 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div> <!-- copyright -->
+        </div> <!-- wrapper -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,876 @@
+@import "../scss/_style.scss";
+@import "../scss/common";
+@import "../scss/mixin-responsive-wrapper";
+@import "../scss/mixin-topmenu";
+@import "../scss/_main-reset";
+@import "../scss/_main-mixin.scss";
+@import "../scss/mixin-footer";
+
+
+body {
+    width: 100%;
+	position: relative;
+    color: #fff;
+
+    h2{
+        font-size: 2rem;
+        font-weight: 100;
+        padding-bottom: 1rem;
+
+        @include responsive(tablet-size) {
+            font-size: 3rem;
+            font-weight: 100;
+        }
+    }
+
+    header {
+        position: relative;
+        @include topmenu-mobile();
+    }
+
+    #slide-nav {
+        display: none;
+
+        @include responsive(tablet-size) {
+            position: fixed;
+            right: 40px;
+            top: 35vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-family: $font-sans;
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+            z-index: 3;
+    
+            a{ 
+                display: flex;
+                align-items: center;
+                position: relative;
+                right: -4px;
+                height: 20px;
+                margin-bottom: 10px;
+                
+                img {
+                    width: 15px;
+                    height: 8px;
+                }
+    
+                &:first-child {
+                    right: -8px;
+                    top: -6px;
+                }
+    
+                &:last-child {
+                    right: -8px;
+                    top: 7px;
+                    margin-bottom: 0;
+                    
+                }
+                span {
+                    &:first-child{
+                    position: absolute;
+                    right: 20px;
+                    opacity: 0;
+                    width: 140px;
+                    text-align: right;
+                    transition: all 0.5s;
+                    }
+    
+                    &:last-child {
+                        box-sizing: content-box;
+                        background-clip : content-box;
+                        width: 7px;
+                        height: 7px;
+                        border: 0px solid rgba(255, 255, 255, 0.3);
+                        border-radius: 50%;
+                        margin-left: 10px;
+                        background-color: #fff;
+                        transition: all 0.1s;
+                    }
+                }
+                &:hover {
+                    
+                    span {
+                        &:first-child{
+                            opacity: 1;
+                            font-weight: 200;
+                        }
+                    }
+                }
+            } //a
+                            
+                .view {
+                    span {
+                        &:first-child{
+                            color: #fff;
+                            opacity: 1;
+                            font-weight: 400;
+                        }
+                        &:last-child {
+                            transform: translateX(28%);
+                            border: 4px solid rgba(255, 255, 255, 0.3);
+                            border-radius: 50%;
+                            background-color: #fff;
+                            opacity: 1;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+        }
+    }//#slide-nav
+
+    @keyframes fadeout {
+		from {opacity: 1;}
+		to {opacity: 0; }
+	}
+
+    
+    section {
+        position: relative;
+        width: 100vw;
+        height: 100vh; 
+    }
+
+    #content1 {
+        // position: relative;
+        // width: 100%;
+		// height: 100%;
+		overflow: hidden;
+        p {
+            font-family: $font-serif;
+        }
+
+        .more {
+            @include both-arrow (90%, 40%);
+            z-index: 5;
+
+            @include responsive (tablet-size) {
+                z-index: 5;
+                width: 10vw;
+                left: 10vw;
+                bottom: 90vh;
+                transform: translate(0, 0);
+            }
+        }
+
+        #intro {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+			width: calc(100% * 5);
+            height: 100vh;
+            transition: left 0.5s ease-out;
+
+            .move-box1{
+                width: 100vw;
+                overflow: hidden;
+				position: relative;
+                padding-top: 13vh;
+                @include bg-full ("intro04_m", top);
+                    @include responsive (tablet-size) {
+                        @include bg-full ("intro04", right top);
+                    }
+
+                video {
+					position: absolute;
+					top: 0px;
+					left: 50%;
+                    transform: translateX(-50%);
+					min-width: 100vw;
+					min-height: 100%;
+					width: auto;
+					height: auto;
+					animation: fadeout 2s 4s; //속도, 지연시간
+					animation-fill-mode: forwards;
+                    background-color: #000;
+				}
+
+                .bg1 {
+                    position: absolute;
+                    left: 0;
+                    top:0;
+                    @include bg-full ("intro01_m", right top);
+
+                    @include responsive (tablet-size) {
+                        @include bg-full ("intro01", right top);
+                    }
+                    animation: fadeout 2s 7s; //속도, 지연시간
+                    animation-fill-mode: forwards;
+                }
+
+                .txt-area {
+                    position: relative;
+                }
+            }
+
+            .move-box2{
+				@include bg-full ("intro02_m", right top);
+				padding-top: 15vh;
+
+                @include responsive (tablet-size) {
+                    @include bg-full ("intro02", right top);
+                }
+			}
+
+            .move-box3{
+				@include bg-full ("intro03_m", right top);
+				padding-top: 15vh;
+                                
+                @include responsive (tablet-size) {
+                    @include bg-full ("intro03", right top);
+                }
+			}
+	
+			.move-box4{
+                position: relative;
+                @include bg-full ("intro05_m", center top);
+				padding-top: 20vh;
+
+                @keyframes scroll {
+                    0% {height: 40%;}
+                    80% {height: 100%;}
+                    100% {height: 40%;}
+                }
+                
+                .scroll {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 6vh;
+                    transform: translateX(-50%);
+                    width: 59px;
+                    height: 60px;
+                    
+
+                    @include responsive (tablet-size) {
+                        position: static;
+                        margin: 12vh  5vw;
+                    }
+                    
+                    ul {
+                        position: relative;
+                        width: 17px;
+                        margin: auto;
+                        animation: scroll 1.4s infinite  linear;
+
+                        li {
+                            &:first-child {
+                                position: absolute;
+                                bottom: 0;
+                                width: 100%;
+                            }
+
+                            &:last-child{
+                                width: 50%;
+                                height: 100%;
+                                border-right: 1px solid rgba(255, 255, 255, 0.7);
+                            }
+                        }
+                    }
+
+                    .txt {
+                        text-align: center;
+                        margin:10px auto;
+                    }
+                }
+
+                                
+                @include responsive (tablet-size) {
+                    @include bg-full ("intro05", right top);
+                }
+			}
+        }
+    }//#content1
+
+    #content2 {
+        @include bg-full ("main_history_m", center bottom);
+
+        @include responsive (tablet-size) {
+            @include bg-full ("main_history", center bottom);
+        }
+		.txt-center {
+            width: 80vw;
+            margin: 20vh auto;
+            
+            @include responsive (tablet-size) {
+                width: 60vw;
+                margin: 10vh auto;
+                // padding-top: 10vh;
+            }
+
+            p{
+                margin:2vh auto;
+            }
+            .detailview {
+                @include detailview (7em, auto);
+                margin-top: 4vh;
+            }
+		}
+
+        video {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            min-width: 200vw;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            opacity: 0.3;
+            // animation: fadeout 2s 4s; //속도, 지연시간
+            // animation-fill-mode: forwards;
+        }
+	}//content2
+
+    #content3 {
+		@include bg-full ("main_restore_m", center);
+
+                        
+        @include responsive (tablet-size) {
+            @include bg-full ("main_restore", center top);
+        }
+
+        .more {
+            @include both-arrow (80%, 90% );
+
+            @include responsive (tablet-size){
+                @include both-arrow (80%, 80% );
+            }
+        }
+
+        #restore-view {
+            position: relative;
+            width: 70vw;
+            height: 70vh;
+            text-align: center;
+            padding-top: 8vh;
+            margin: auto;
+            overflow: hidden;
+
+            @include responsive (tablet-size) {
+                width: 62vw;
+                padding-top: 8vh;
+            }
+            
+
+            .slider {
+                position: absolute;
+                left: 0px;
+                display: flex;
+                transition: left 1s ease-out;
+
+                .restore {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    height: 60vh;
+                    font-family: $font-sans;
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    background-color: rgba(0, 0, 0, 0.4);
+                    padding: 28px;
+    
+                    &:hover {
+                    border: 1px solid rgba(255, 255, 255, 0.8);
+                    }
+    
+                    @include responsive (tablet-size) {
+                        padding: 32px;
+                    }
+        
+                    .year {
+                        font-size: 2.4em;
+                        font-weight: 500;
+                        padding-top: 2vh;
+                        
+                        @include responsive (tablet-size) {
+                            font-size: 2.8em;
+                            font-weight: 500;
+                            padding-top: 4.4vh;
+                        }
+                    }
+        
+                    .title {
+                        font-size: 1.2em;
+                        font-weight: 200;
+                        padding-bottom: 2vh;
+    
+                        @include responsive (tablet-size) {
+                            font-size: 1.4em;
+                            font-weight: 200;
+                            padding-bottom: 4.4vh;
+                        }
+                    }
+        
+                    p{
+                        text-align: justify;
+    
+                        @include responsive (tablet-size) {
+                            line-height: 1.6em;
+                            text-align: justify;
+                        }
+                    }
+        
+                    .restore-img {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 18vh;
+                        margin-top: 2vh;
+                        
+    
+                        .tooltip {
+                            width: 90%;
+                            font-weight: 300;
+                            padding: 0.8em;
+                            background-color: rgba(32, 25, 25, 0.9);
+                            visibility: hidden;
+                        }
+    
+                        &:hover .tooltip {
+                            visibility: visible;
+                        }
+                    }
+    
+                    .img01 {@include item-bg ("restore01");}
+                    .img02 {@include item-bg ("restore02");}
+                    .img03 {@include item-bg ("restore03");}
+                    .img04 {@include item-bg ("restore04");}
+                    .img05 {@include item-bg ("restore05");}
+                }
+            }
+    
+        }
+	}//content3
+
+    #content4 {
+		display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding-top: 16vh;
+        font-family: $font-sans;
+		line-height: 1.6em;
+
+
+		@include bg-full ("main_info_m", center);
+
+        @include responsive (tablet-size) {
+            flex-direction: row;
+            align-items: start;
+            gap: 40px;
+            padding-top: 30vh;
+            @include bg-full ("main_info", center);
+        }
+        
+        & > div {
+            width: 90%;
+            @include  responsive (tablet-size) {
+                width: 400px;
+            }
+        }
+
+        .txt {
+            max-width: 100%;
+            line-height: 1.2em;
+        }
+
+        h4 {
+            font-size: 1.2em;
+            font-weight: 400;
+            line-height: 2em;
+            padding-top: 1em;
+
+            @include responsive (tablet-size) {
+                font-size: 1.4em;
+                font-weight: 400;
+                line-height: 2.6em;
+                padding-top: 2em;
+            }
+        }
+
+        .box {
+            position: relative;
+            width: 100%;
+            height: 16vh;
+            border: 1px solid  rgba(255, 255, 255, 0.5);
+            overflow: hidden;
+            &:hover {
+            border: 1px solid  rgba(255, 255, 255, 0.8);
+            }
+
+            @include responsive (tablet-size) {
+                height: 250px;
+                }
+
+            .tooltip {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                font-size: 2em;
+                font-weight: 300;
+                color: #000;
+                background-color: rgba(255, 255, 255, 0.8);
+                visibility: hidden;
+                transition: 0.3s;
+            }
+
+            &:hover .tooltip {
+                visibility: visible;
+            }
+
+            .map_img {
+                width: 500px;
+                height: 300px;
+                opacity: 0.5;
+                transition: 0.3s;
+    
+                &:hover {
+                    filter: blur(2px);
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .map-guide .map_img {@include item-map ("map");}
+        .map-info {
+            .map_img {@include item-map ("map_info");}
+
+            button {
+                margin-top: 20px;
+                @include responsive (tablet-size) {
+                    margin-top: 60px;
+                }
+            }
+        }
+	}//content4
+
+    #content5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 12vh;
+        @include bg-full ("main_event_m", center);
+        
+        @include responsive (tablet-size) {
+            padding-top: 18vh;
+            padding-bottom: 10vh;
+            @include bg-full ("main_event", center);
+        }
+
+        .more {
+            @include both-arrow (40%, 90%);
+
+            @include responsive (tablet-size) {
+                @include both-arrow (40%, 74%);
+            }
+        }
+
+        #poster-view {
+            width: 52vw;
+            margin-top: 12vh;
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid #000;
+
+            @include responsive (tablet-size) {
+                width: 55vw;
+            }
+
+            .slider{
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+                margin: auto;
+                transition: left 1s ease-out;
+
+
+                li {
+                    height: 38vh;
+                    overflow: hidden;
+
+                    @include responsive (tablet-size) {
+                        height: 42vh;
+                        opacity: 0.5;
+                        overflow: hidden;
+                    }
+                    
+                    &:first-child {
+                        @include item-bg ("event01")
+                    }
+
+                    &:nth-child(2) {
+                        @include item-bg ("event02")
+                    }
+
+                    &:nth-child(3) {
+                        @include item-bg ("event03")
+                    }
+
+                    &:nth-child(4) {
+                        @include item-bg ("event04")
+                    }
+
+                    &:focus {
+                        opacity: 1;
+                    }
+                }
+
+                .view {
+                    opacity: 1;
+                }
+            }
+        }
+
+        #event-hover {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: 86%;
+            display: flex;
+
+            @include responsive (tablet-size) {
+                width: 56%;
+                height: 28vh;
+            }
+
+            .event-guide{
+                flex-direction: column;
+                padding: 1vh;
+                display:none;
+    
+                @include responsive (tablet-size) {
+                    flex-direction: row;
+                    padding-top: 6vh;
+                }
+
+                &:first-child {
+                    display: flex;
+                }
+
+                .event-schedule {
+                    font-family: $font-sans;
+                    margin: auto;
+    
+                    @include responsive (tablet-size) {
+                        display: flex;
+                        align-items: flex-end;
+                        width: 30vw;
+                        margin: 0;
+                        margin-bottom: 10vh;
+
+                    }
+    
+                    table {
+                        display: none;
+                        
+                        td {
+                            vertical-align: top;
+                            line-height: 1.4em;
+                            padding: 0.2em 0;
+                        }
+    
+                        @include responsive (tablet-size) {
+                            display: block;
+                        }
+                    }
+                }
+    
+                .summary {
+                    width: 100%;
+                    margin-top: 3vh;
+    
+                    @include responsive (tablet-size) {
+                        width: 76vw;
+                        padding-left: 6vw;
+                        padding-right: 40px;
+                        margin-top: 0;
+                    }
+    
+                    .title {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        @include responsive (tablet-size) {
+                            justify-content: space-between;
+                        }
+
+                        h2{
+                            font-size: 1.5em;
+                            font-weight: 100;
+                            font-family: $font-serif;
+        
+                            @include responsive (tablet-size) {
+                                font-size: 2.6em;
+                                text-align: left;
+                                margin-right: 20px;
+                            }
+                        }
+                        
+                        .detailview {
+                            @include detailview (7em, 0);
+                            transform: scale(0.8);
+    
+                            @include responsive (tablet-size) {
+                            transform: scale(1);
+                            }
+                        }
+                    }
+                    
+                    p {
+                        width: 100%;
+                        height: 26vh;
+                        overflow: auto;
+                        text-align: justify;
+                        padding-top: 1vh;
+                        
+                        @include responsive (tablet-size) {
+                            width: unset;
+                            height: unset;
+                            padding-top: 0.5vh;
+                            overflow: visible;
+                            
+                        }
+                    }
+                }
+            }
+
+            .button1 {
+                transform: scale(0.8);
+                margin: auto;
+                margin-bottom: 4vh;
+
+                @include responsive (tablet-size) {
+                    position: absolute;
+                    left: 1em;
+                    bottom: 1em;
+                    transform: scale(1);
+                    margin-bottom: unset;
+                }
+            }
+        }
+	}//content5
+
+    #content6 {
+        height: 130vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include bg-full ("main_gallery", center);
+        
+        .more {
+            @include both-arrow (50%, 90%);
+
+            @include responsive (tablet-size) {
+                @include both-arrow (50%, 80%);
+            }
+        }
+
+        #gallery-view {
+            width: 65vw;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+
+            &:hover {
+                border: 1px solid rgba(255, 255, 255, 1);
+            }
+
+            div {
+                position: relative;
+                display: flex;
+                height: 60vh;
+                transition: 0.5s;
+                display: none;
+
+                &:nth-child(2) {
+                    display: flex;
+                }
+    
+                img {
+                    min-width: 65vw;
+                    min-height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .gallery-nav {
+            font-family: $font-sans;
+            padding-top: 1vh;
+            width: 65vw;
+
+            .line {
+                line-height: 4em;
+                font-family: $font-serif;
+                font-size: 1.4em;
+                font-weight: 100;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+                margin-bottom: -4px;
+            }
+
+            .season {
+                display: flex;
+                justify-content: space-evenly;
+                
+                a {
+                    div {
+                        text-align: center;
+                        
+                        span {
+                            display: block;
+                            width: 10px;
+                            height: 10px;
+                            border: 0px solid rgba(255, 255, 255, 0.3);
+                            border-radius: 50%;
+                            margin-left: 10px;
+                            background-color: #fff;
+                            margin: 0 auto;
+                            margin-bottom: 10px;
+
+                            opacity: 0;
+                            transition: all 0.1s;
+                        }
+                    }
+                }
+
+                .view {
+                    font-weight: 600;
+                    span {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+		.txt-area {
+			margin-top: 20vh;
+		}
+	}//content6
+
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+
+    .footer-logo {
+        img {
+            width: 100px;
+        }
+    }
+}
+
+} //#wrapper 

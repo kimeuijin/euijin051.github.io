@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="H.Kim">
+    <meta name="title" property="og:title" content="경복궁">
+    <meta name="decription" property="og:description" content="경복궁 회원가입">
+    <meta name="images" property="og:image" content="./../../images/meta-image.jpg">
+    <meta name="type" property="og:type" content="article">
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./../../images/favicon.ico" type="image/x-icon">
+    <title>회원가입</title>
+</head>
+<body>
+    <header>
+        <div class="header-mobile">
+            <div class="header-flex-box">
+                <h1 class="logo">
+                    <a href="./../../index.html"><img src="./../../images/logo_wt.svg" alt="main-logo"></a>
+                </h1> <!-- logo -->
+                <div class="hamburger">
+                    <input type="checkbox" id="menu">
+                    <label for="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div> <!-- hamburger -->
+            </div> <!-- header-flex-box -->
+            
+            <div class="mobilemenu">
+                <ul class="mobile-gnb">
+                    <li class="mobilemenu-home mobilemenu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li> <!-- mobilemenu-home -->
+    
+                    <li class="mobilemenu-history mobilemenu">
+                        <button class="accordion">역사 알기</button>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html">복원사업에 관해</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-history -->
+                    
+                    <li class="mobilemenu-map mobilemenu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li> <!-- mobilemenu-map -->
+                    
+                    <li class="mobilemenu-info mobilemenu">
+                        <button class="accordion">관람 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-info -->
+    
+                    <li class="mobilemenu-event mobilemenu">
+                        <button class="accordion">행사 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html">생과방</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-event -->
+                    
+                    <li class="mobilemenu-notice mobilemenu">
+                        <button class="accordion">소식 알림</button>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-notice -->
+                    
+                    <li class="mobilemenu-box">
+                        <ul class="login-flex-box">
+                            <li class="mobilemenu-login mobilemenu">
+                                <a href="login.html">로그인</a>
+                            </li> <!-- mobilemenu-login -->
+                            
+                            <li class="mobilemenu-mypage mobilemenu">
+                                <a href="mypage.html">내 정보</a>
+                            </li> <!-- mobilemenu-mypage -->
+                            
+                            <li class="mobilemenu-reservation mobilemenu">
+                                <a href="booking.html">예약·예매</a>
+                            </li> <!-- mobilemenu-reservation -->
+                        </ul> <!-- login-flex-box -->
+                    </li> <!-- mobilemenu-box -->
+                </ul> <!-- mobile-gnb -->
+            </div> <!-- mobilemenu -->
+        </div> <!-- header-mobile -->
+        <script src="./js/mobile-menu.js"></script>
+        
+        <ul class="topmenu"> <!-- 현재 페이지 li.submenu 클래스에 selected 삽입 -->
+            <li class="submenu selected">
+                <a href="signup.html">회원가입</a>
+            </li>
+            <li class="submenu"></li>
+            <li class="submenu"></li>
+            <li class="submenu"></li>
+        </ul> <!-- topmenu -->
+    </header>
+
+    <main>
+        <aside>
+            <div class="sidemenu">
+                <h1 class="header-logo">
+                    <a href="./../../index.html"><img src="./../../images/logo.svg" alt="main-logo"></a>
+                </h1>
+                <ul class="gnb"> <!-- 현재 페이지 li.menu 클래스에 selected 삽입 -->
+                    <li class="sidemenu-home menu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li> <!-- sidemenu-home -->
+    
+                    <li class="sidemenu-history menu">
+                        <a href="./../history/history.html">역사 알기</a>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html">복원사업에 관해</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-history -->
+    
+                    <li class="sidemenu-map menu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li> <!-- sidemenu-map -->
+    
+                    <li class="sidemenu-info menu">
+                        <a href="./../info/time-price.html">관람 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-info -->
+    
+                    <li class="sidemenu-event menu">
+                        <a href="./../event/alternating.html">행사 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html">생과방</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-event -->
+    
+                    <li class="sidemenu-notice menu">
+                        <a href="./../notice/notice.html">소식 알림</a>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-notice -->
+    
+                    <li class="sidemenu-login menu">
+                        <a href="login.html">로그인</a>
+                    </li> <!-- sidemenu-login -->
+    
+                    <li class="sidemenu-mypage menu">
+                        <a href="mypage.html">내 정보</a>
+                    </li> <!-- sidemenu-mypage -->
+    
+                    <li class="sidemenu-reservation menu">
+                        <a href="booking.html">예약·예매</a>
+                    </li> <!-- sidemenu-reservation -->
+                </ul> <!-- gnb -->
+            </div> <!-- sidemenu -->
+        </aside>
+
+        <section class="signup">
+			<div>
+                <h2 class="signup-title">회원가입</h2>
+            </div>
+			<div class="signup-form">
+                <form action="#" method="post" name="frm">
+                    <div class="row">
+                        <span class="title">아이디</span>
+                        <div class="userid-flex-box flexbox">
+                            <input type="text" name="userid" id="userid" placeholder="아이디를 입력해주세요." minlength="8" maxlength="16" required>
+                            <button class="userid btn" type="button" onclick="location.href=('#')">
+                                    <span>중복 확인</span>
+                            </button>
+                        </div> <!-- userid-flex-box -->
+                    </div>
+                    <div class="row">
+                        <span class="title">이름</span>
+                        <div class="username-flex-box flexbox">
+                            <input type="text" name="username" id="username" placeholder="이름을 입력해주세요." minlength="2" maxlength="8" required>
+                            <button class="username btn" type="button" onclick="location.href=('#')">
+                                    <span>본인 인증</span>
+                            </button>
+                        </div> <!-- userid-flex-box -->
+                    </div>
+                    <div class="row">
+                        <span class="title">비밀번호</span>
+                        <input type="password" name="userpw" id="userpw" placeholder="비밀번호를 입력해주세요." minlength="8" maxlength="16" required>
+                    </div>
+                    <div class="row">
+                        <span class="title">비밀번호 확인</span>
+                        <input type="password" name="userpw2" id="userpw2" placeholder="비밀번호를 한번 더 입력해주세요." minlength="8" maxlength="16" required>
+                    </div>
+                    <div class="row">
+                        <span class="title">이메일</span>
+                        <div class="mail-flex-box flexbox">
+                            <div>
+                                <input type="text" name="mail" id="mail" placeholder="이메일 아이디" maxlength="16" required>
+                                <span>@</span>
+                                <input type="text" name="mailServer1" id="mailServer1" maxlength="16" required>
+                            </div>
+                            <select id="mailServer2" name="mailServer2" title="이메일 주소 선택" onchange="input_email();">
+                                <option value="">직접 입력</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="daum.net">daum.net</option>
+                                <option value="gmail.com">gmail.com</option>
+                                <option value="yahoo.com">yahoo.com</option>
+                                <option value="hotmail.net">hotmail.net</option>
+                            </select>
+                        </div> <!-- mail-flex-box -->
+                    </div>
+                    <div class="row">
+                        <span class="title">전화번호</span>
+                        <div class="phone-flex-box flexbox">
+                            <select id="phone1" name="phone1" onchange="input_email();" required>
+                                <option value="">선택</option>
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                            </select>
+                            <span>-</span>
+                            <input type="tel" name="phone2" id="phone2" maxlength="4" required pattern="[0-9]+">
+                            <span>-</span>
+                            <input type="tel" name="phone3" id="phone3" maxlength="4" required pattern="[0-9]+">
+                        </div> <!-- phone-flex-box -->
+                    </div>
+                    <div class="row">
+                        <span class="title">주소</span>
+                        <div class="address-flex-box flexbox">
+                            <div>
+                                <span>우편번호</span>
+                                <input type="number" name="zipcode" id="zipcode" required>
+                            </div>
+                            <button class="address btn" type="button" onclick="location.href=('#')">
+                                <span>주소 검색</span>
+                            </button>
+                            <input type="text" name="address1" id="address1" minlength="5" maxlength="50" required>
+                            <input type="text" name="address2" id="address2" placeholder="나머지 주소를 입력해주세요." minlength="5" maxlength="50" required>
+                        </div> <!-- address-flex-box -->
+                    </div>
+                    <div class="row">
+                        <span class="title">필수 약관 동의</span>
+                        <div class="terms-flex-box flexbox">
+                            <textarea name="terms" id="terms" readonly cols="30" rows="10">경복궁 누리집 이용약관 동의(필수)
+
+
+제 1 조 (목적)
+
+이 약관은 문화재청 궁능유적본부 경복궁관리소("경복궁관리소" 또는 "경복궁")이 제공하는 경복궁 및 경복궁 관련 제반 서비스의 이용과 관련하여 경복궁관리소와 회원과의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
+
+
+제 2 조 (정의)
+
+이 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+①"서비스"라 함은 구현되는 단말기(PC, TV, 휴대형단말기 등의 각종 유무선 장치를 포함)와 상관없이 "회원"이 이용할 수 있는 경복궁 및 경복궁 관련 제반 서비스를 의미합니다.
+②"회원"이라 함은 경복궁의 "서비스"에 접속하여 이 약관에 따라 "경복궁관리소"와 이용계약을 체결하고 "경복궁관리소"가 제공하는 "서비스"를 이용하는 고객을 말합니다.
+③"아이디(ID)"라 함은 "회원"의 식별과 "서비스" 이용을 위하여 "회원"이 정하고 "경복궁관리소"가 승인하는 문자와 숫자의 조합을 의미합니다.
+④"비밀번호"라 함은 "회원"이 부여 받은 "아이디와 일치되는 "회원"임을 확인하고 비밀보호를 위해 "회원" 자신이 정한 문자 또는 숫자의 조합을 의미합니다.
+⑤"유료서비스"라 함은 "경복궁관리소"가 유료로 제공하는 각종 온라인디지털콘텐츠(각종 정보콘텐츠, VOD, 아이템 기타 유료콘텐츠를 포함) 및 제반 서비스를 의미합니다.
+⑥"포인트"라 함은 서비스의 효율적 이용을 위해 경복궁관리소가 임의로 책정 또는 지급, 조정할 수 있는 재산적 가치가 없는 "서비스" 상의 가상 데이터를 의미합니다.
+⑦"게시물"이라 함은 "회원"이 "서비스"를 이용함에 있어 "서비스상"에 게시한 부호ㆍ문자ㆍ음성ㆍ음향ㆍ화상ㆍ동영상 등의 정보 형태의 글, 사진, 동영상 및 각종 파일과 링크 등을 의미합니다.
+
+
+개인정보 수집 및 이용에 대한 안내(필수)
+
+
+정보통신망법 규정에 따라 경복궁에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.
+
+
+1. 수집하는 개인정보
+
+이용자는 회원가입을 하지 않아도 정보 검색, 뉴스 보기 등 대부분의 경복궁 서비스를 회원과 동일하게 이용할 수 있습니다. 이용자가 메일, 캘린더, 카페, 블로그 등과 같이 개인화 혹은 회원제 서비스를 이용하기 위해 회원가입을 할 경우, 경복궁은 서비스 이용을 위해 필요한 최소한의 개인정보를 수집합니다.</textarea>
+                                <div>
+                                    <input type="checkbox" name="terms-check" id="terms-check" required>
+                                    <label for="terms-check">개인정보 수집·이용 및 정보 제공에 동의합니다.</label>
+                                </div>
+                        </div> <!-- terms-flex-box -->
+                    </div>
+                    <div class="button-flex-box">
+                        <button type="reset">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <span> 다시 작성하기</span>
+                        </button>
+                        <button type="submit">
+                            <span>회원가입 </span>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div> <!-- button-flex-box -->
+                </form>
+			</div> <!-- signup-form -->
+		</section> <!-- signup -->
+        <script src="./js/mypage.js"></script>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="policy">
+                <ul>
+                    <li><a href="./../service/privacy.html">개인정보처리방침</a></li>
+                    <li><a href="./../service/copyright.html">저작권정책</a></li>
+                    <li><a href="https://www.cha.go.kr/cop/bbs/selectBoardNameCheck.do?bbsId=BBSMSTR_1049&checkType=regist" target="_blank">개인정보침해신고센터</a></li>
+                </ul>
+            </div> <!-- policy -->
+            
+            <div class="copyright">
+                <div class="footer-logo">
+                    <img src="./../../images/logo.svg" alt="footer-logo">
+                </div>
+                <div class="contact">
+                    <p>문화재청 경복궁</p>
+                    <p>우)03045 서울특별시 종로구 사직로 161<br>전화번호 (02) 3700-3900 팩스 (02) 3700-3909</p>
+                    <p>COPYRIGHT 2022 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div> <!-- copyright -->
+        </div> <!-- wrapper -->
+    </footer>
+</body>
+</html>

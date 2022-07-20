@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" property="og:title" content="경복궁">
+    <meta name="images" property="og:image" content="./../../images/meta-image.jpg">
+    <meta name="description" property="og:description" content="수라간 시식공감">
+    <meta name="type" property="og:type" content="article">
+    <meta name="Author" content="jihee">
+    <link rel="stylesheet" href="./css/tasty.css" type="text/css">
+    <link rel="shortcut icon" href="./../../images/favicon.ico" type="image/x-icon">
+    <title>수라간 시식공감</title>
+</head>
+<body>
+    <header>
+        <div class="header-mobile">
+            <div class="header-flex-box">
+                <h1 class="logo">
+                    <a href="./../../index.html"><img src="./../../images/logo_wt.svg" alt="main-logo"></a>
+                </h1> <!-- logo -->
+                <div class="hamburger">
+                    <input type="checkbox" id="menu">
+                    <label for="menu">
+                        <span></span> 
+                        <span></span>
+                        <span></span>
+                    </label> 
+                </div> <!-- hamburger -->
+            </div> <!-- header-flex-box -->
+            
+            <div class="mobilemenu">
+                <ul class="mobile-gnb">
+                    <li class="mobilemenu-home mobilemenu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li> <!-- mobilemenu-home -->
+    
+                    <li class="mobilemenu-history mobilemenu">
+                        <button class="accordion">역사 알기</button>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html">복원사업에 관해</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-history -->
+                    
+                    <li class="mobilemenu-map mobilemenu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li> <!-- mobilemenu-map -->
+                    
+                    <li class="mobilemenu-info mobilemenu">
+                        <button class="accordion">관람 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-info -->
+    
+                    <li class="mobilemenu-event mobilemenu selected">
+                        <button class="accordion">행사 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html" class="selected">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html">생과방</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-event -->
+                    
+                    <li class="mobilemenu-notice mobilemenu">
+                        <button class="accordion">소식 알림</button>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-notice -->
+                    
+                    <li>
+                        <div class="login-flex-box">
+                            <ul>
+                                <li class="mobilemenu-login mobilemenu">
+                                    <a href="./../mypage/login.html">로그인</a>
+                                </li> <!-- mobilemenu-login -->
+                                
+                                <li class="mobilemenu-mypage mobilemenu">
+                                    <a href="./../mypage/mypage.html">내 정보</a>
+                                </li> <!-- mobilemenu-mypage -->
+                                
+                                <li class="mobilemenu-reservation mobilemenu">
+                                    <a href="./../mypage/booking.html">예약·예매</a>
+                                </li> <!-- mobilemenu-reservation -->
+                            </ul>
+                        </div> <!-- mobile-flex-box -->
+                    </li>
+                </ul> <!-- mobile-gnb -->
+            </div> <!-- mobilemenu -->
+        </div> <!-- header-mobile -->
+        <script src="./js/mobile-menu.js"></script>
+        
+        <ul class="topmenu"> <!-- 현재 페이지 li.menu 클래스에 selected 삽입 -->
+            <li class="submenu">
+                <a href="./../event/alternating.html">수문장 교대의식</a>
+            </li>
+            <li class="submenu selected">
+                <a href="./../event/tasty.html">수라간 시식공감</a>
+            </li>
+            <li class="submenu">
+                <a href="./../event/star.html">별빛야행</a>
+            </li>
+            <li class="submenu">
+                <a href="./../event/saenggwabang.html">생과방</a>
+            </li>
+        </ul> <!-- topmenu -->
+    </header>
+
+    <main>
+        <aside>
+            <div class="sidemenu">
+                <h1 class="header-logo">
+                    <a href="./../../index.html"><img src="./../../images/logo.svg" alt="main-logo"></a>
+                </h1>
+                <ul class="gnb"> <!-- 현재 페이지 li.menu 클래스에 selected 삽입 -->
+                    <li class="sidemenu-home menu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li> <!-- sidemenu-home -->
+    
+                    <li class="sidemenu-history menu">
+                        <a href="./../history/history.html">역사 알기</a>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html">복원사업에 관해</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-history -->
+    
+                    <li class="sidemenu-map menu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li> <!-- sidemenu-map -->
+    
+                    <li class="sidemenu-info menu">
+                        <a href="./../info/time-price.html">관람 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-info -->
+    
+                    <li class="sidemenu-event menu selected">
+                        <a href="./../event/alternating.html">행사 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html" class="selected">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html">생과방</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-event -->
+    
+                    <li class="sidemenu-notice menu">
+                        <a href="./../notice/notice.html">소식 알림</a>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-notice -->
+    
+                    <li class="sidemenu-login menu">
+                        <a href="./../mypage/login.html">로그인</a>
+                    </li> <!-- sidemenu-login -->
+    
+                    <li class="sidemenu-mypage menu">
+                        <a href="./../mypage/mypage.html">내 정보</a>
+                    </li> <!-- sidemenu-mypage -->
+    
+                    <li class="sidemenu-reservation menu">
+                        <a href="./../mypage/booking.html">예약·예매</a>
+                    </li> <!-- sidemenu-reservation -->
+                </ul> <!-- gnb -->
+            </div> <!-- sidemenu -->
+        </aside>
+
+        <section class="event">
+            <h2>수라간 시식공감</h2>
+            <div class="img-text">
+                <img src="./images/tasty-main.png" alt="수라간 시식공감 메인이미지">
+                <div class="main-text">
+                    <h3>수라간 시식공감</h3>
+                    <p>“ 궁궐 뜰에서 잔치하느라고 천막을 설치하여 비에 대비했는데,<br>
+                        밤낮으로 일을 독촉하고 공력도 적지 않았으며,<br>
+                      상으로 내리는 물건도 이루 셀 수 없었거니와... ”
+                    </p>
+                    <p class="person">
+                        - 연산군 일기 -
+                    </p>
+                </div>
+            </div>
+            <div class="wrapper-box">
+                <div class="info">
+                    <div class="line-flex">
+                        <div class="little-title">
+                            <h3>
+                                <span>
+                                    소개
+                                </span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="info-text-mobile">
+                        <p>‘시식공감’은 궁중 문화를 보고 먹고 즐기고 감동한다는 視(공간), 食(음식), 公(공연), 感(감동)을 주제로
+                            궁중음식문화를 직접 체험해보는 전통문화 복합체험 프로그램입니다.<br>
+                            시식공감은 ‘식도락x시식공감’과 ‘궁캉스’(궁에서 즐기는 슬기로운 여름, 가을나기) 프로그램으로 구성되어 있습니다.
+                        </p>
+                    </div>
+                    <div class="info-text-pc">
+                        <p>‘시식공감’은 궁중 문화를 보고 먹고 즐기고 감동한다는 視(공간), 食(음식), 公(공연), 感(감동)을 주제로<br>
+                            궁중음식문화를 직접 체험해보는 전통문화 복합체험 프로그램입니다.<br>
+                            시식공감은 ‘식도락x시식공감’과 ‘궁캉스’(궁에서 즐기는 슬기로운 여름, 가을나기) 프로그램으로 구성되어 있습니다.
+                        </p>
+                    </div>
+                </div> <!--info-->
+    
+                <div class="guide">
+                    <div class="line-flex">
+                        <div class="little-title">
+                            <h3>
+                                <span>
+                                    안내
+                                </span>
+                            </h3>
+                        </div>
+                    </div>
+    
+                    <div class="guide-info">
+                        <div class="guide-flex">
+                            <div class="guide-box">
+                                <p>식도락</p>
+                            </div>
+                            <div class="lunch">
+                                <p>
+                                    ‘식도락’은 경복궁의 특별 프로그램으로 &lt;궁중병과 만들기&gt;와 &lt;인문학 강의&gt;, &lt;도슭콘서트&gt;로 구성되며<br>
+                                    궁에서 즐기는 슬기로운 초겨울나기에 맞춰 ‘식도락×시식공감’으로 새롭게 기획하였습니다.<br>
+                                    3명의 명사가 들려주는 재미있는 이야기와 공연, 궁중음식 (병과)을 함께 즐길 수 있어<br>
+                                    경복궁 외소주방에서 경험하는 특별한 시간이 될 것입니다.
+                                </p>
+                                <div class="lunch-img-flex">
+                                    <img src="./images/tasty1.png" alt="식도락1">
+                                    <img src="./images/tasty2.png" alt="식도락2">
+                                    <img src="./images/tasty3.png" alt="식도락3">
+                                    <img src="./images/tasty4.png" alt="식도락4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-flex">
+                            <div class="guide-box">
+                                <p>궁캉스</p>
+                            </div>
+                            <div class="vacation">
+                                <p>
+                                    경복궁 궁캉스는 궁궐 생활상을 현대적으로 재구성한 문화재 활용 프로그램입니다.<br>
+                                    체험 꾸러미엔 궁캉스를즐기는데　부족함이 없도록 왕께서 하사하신 담요와 이용권이 담겨있습니다.<br>
+                                    청량한 밤 숨 가쁜 일상에서 잠시 벗어나 고즈넉한 궁궐에서의 여름, 가을 나기체험 프로그램을 통해,<br>
+                                    당신의 마음을 위로하고자 합니다.
+                                </p>
+                                <div class="stay-img-flex">
+                                    <img src="./images/summer-vacation1.png" alt="궁캉스1">
+                                    <img src="./images/summer-vacation2.png" alt="궁캉스2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--guide-->
+
+                <div class="operation">
+                    <div class="line-flex">
+                        <div class="little-title">
+                            <h3>
+                                <span>
+                                    운영기간
+                                </span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="operation-text">
+                        <p class="info-center">
+                            매년 여름/가을
+                        </p>
+                    </div>
+                </div><!--operation-->
+
+                <div class="inquiry">
+                    <div class="line-flex">
+                        <div class="little-title">
+                            <h3>
+                                <span>
+                                    행사문의
+                                </span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="inquiry-text">
+                        <p>한국문화재재단 수라간 시식공감담당 02-3210-4806</p>
+                        <p class="ps">
+                            ※ 행사 기간은 추후 상황에 따라 변동될 수 있습니다.<br>
+                            ※ 본 행사에 대한 자세한 안내사항(행사 일정, 예매 안내 등)은 추후 [행사일정]메뉴에서 확인이 가능합니다.<br>
+                            ※ 행사에 대한 기타 안내사항(우천취소 등)은 [공지사항] 메뉴에서 확인 가능 합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+		</section> 
+
+        
+    </main>
+    <footer>
+        <div class="wrapper">
+            <div class="policy">
+                <ul>
+                    <li><a href="./../service/privacy.html">개인정보처리방침</a></li>
+                    <li><a href="./../service/copyright.html">저작권정책</a></li>
+                    <li><a href="https://www.cha.go.kr/cop/bbs/selectBoardNameCheck.do?bbsId=BBSMSTR_1049&checkType=regist" target="_blank">개인정보침해신고센터</a></li>
+                </ul>
+            </div> <!-- policy -->
+            
+            <div class="copyright">
+                <div class="footer-logo">
+                    <img src="./../../images/logo.svg" alt="footer-logo">
+                </div>
+                <div class="contact">
+                    <p>문화재청 경복궁</p>
+                    <p>우)03045 서울특별시 종로구 사직로 161<br>전화번호 (02) 3700-3900 팩스 (02) 3700-3909</p>
+                    <p>COPYRIGHT 2022 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div> <!-- copyright -->
+        </div> <!-- wrapper -->
+    </footer>
+</body>
+</html>

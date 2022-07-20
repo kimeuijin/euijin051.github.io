@@ -1,0 +1,108 @@
+@mixin footer-mobile() {
+    background-color: $color-main;
+
+    div.wrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 8%;
+
+        div.policy > ul {
+            padding: 20px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    
+            li > a {
+                color: $sidemenu-background;
+
+                font: {
+                    size: 0.7em;
+                    weight: 200;
+                }
+            }
+        }
+    
+        div.copyright {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 30px 0;
+    
+            div.footer-logo {
+                display: none;
+            }
+            
+            div.contact {
+                color: $sidemenu-background;
+                line-height: 1.1em;
+
+                p {
+                    font: {
+                        size: 0.7em;
+                        weight: 200;
+                    }
+
+                    &:first-child {
+                        font: {
+                            size: 0.8em;
+                            weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin footer-pc() {
+    padding: 0 50px;
+
+    @include responsive(pc-size) {
+        padding: 0 200px;
+    }
+
+    div.wrapper {
+        @include responsive(pc-size) {
+            padding: 0 13%;
+        }
+        
+        div.policy > ul {
+            width: 50%;
+
+            li > a {
+                font: {
+                    size: 0.9em;
+                }
+            }
+        }
+    
+        div.copyright {
+            div.footer-logo {
+                display: block;
+                width: 145px;
+                padding-bottom: 0;
+                img {
+                    filter: invert(96%) sepia(96%) saturate(18%) hue-rotate(266deg) brightness(105%) contrast(105%);
+                }
+            }
+            
+            div.contact {
+                width: 85%;
+                line-height: 1.6em;
+    
+                p {
+                    padding-left: 10%;
+
+                    font: {
+                        size: 0.9em;
+                        weight: 200;
+                    }
+
+                    &:first-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

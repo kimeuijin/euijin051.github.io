@@ -1,0 +1,97 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include topmenu-pc();
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+// aside
+aside {
+    @include sidemenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include sidemenu-pc();
+    }
+}
+
+//section
+section.faq {
+    @include wrapper();
+
+    width: 100%;
+    margin: 100px auto;
+
+    div > h2 {
+        padding-bottom: 20px;
+    }
+
+    ul.faq-list > li.faqArc {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 15px 10px;
+        border-top: 1px solid $color-border;
+
+        span {
+            display: block;
+
+            font: {
+                size: 1em;
+                weight: 400;
+            }
+            
+            &.no {
+                width: 20%;
+            }
+            
+            &.title {
+                width: 80%;
+                cursor: pointer;
+            }
+            
+            &.content {
+                width: 100%;
+                padding-left: 20%;
+                line-height: 1.6em;
+                font-weight: 600;
+
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-out, padding-top 0.5s ease-out;
+            }
+        }
+
+        &:first-child {
+            border-top: 1px solid $color-main;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid $color-main;
+        }
+    }
+}
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}

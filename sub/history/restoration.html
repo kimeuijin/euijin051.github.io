@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" property="og:title" content="경복궁">
+    <meta name="images" property="og:image" content="./../../images/meta-image.jpg">
+    <meta name="description" property="og:description" content="경복궁의 복원사업에 관해">
+    <meta name="type" property="og:type" content="article">
+    <meta name="Description" content="복원사업에 관해">
+    <meta name="Author" content="Dong">
+    <link rel="shortcut icon" href="./../../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/restoration.css">
+    <script src="./js/jquery.js"></script>
+    <title>복원사업에 관해</title>
+</head>
+<body>
+    <header>
+        <div class="header-mobile">
+            <div class="header-flex-box">
+                <h1 class="logo">
+                    <a href="./../../index.html">
+                        <img src="./../../images/logo_wt.svg" alt="main-logo">
+                    </a>
+                </h1> <!-- logo -->
+                <div class="hamburger">
+                    <input type="checkbox" id="menu">
+                    <label for="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div> <!-- hamburger -->
+            </div> <!-- header-flex-box -->
+            
+            <div class="mobilemenu">
+                <ul class="mobile-gnb">
+                    <li class="mobilemenu-home mobilemenu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li> <!-- mobilemenu-home -->
+    
+                    <li class="mobilemenu-history mobilemenu selected">
+                        <button class="accordion">역사 알기</button>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html" class="selected">복원사업에 관해</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-history -->
+                    
+                    <li class="mobilemenu-map mobilemenu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li> <!-- mobilemenu-map -->
+                    
+                    <li class="mobilemenu-info mobilemenu">
+                        <button class="accordion">관람 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-info -->
+    
+                    <li class="mobilemenu-event mobilemenu">
+                        <button class="accordion">행사 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html">생과방</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-event -->
+                    
+                    <li class="mobilemenu-notice mobilemenu ">
+                        <button class="accordion">소식 알림</button>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-notice -->
+                    
+                    <li class="mobilemenu-box">
+                        <ul class="login-flex-box">
+                            <li class="mobilemenu-login mobilemenu">
+                                <a href="./../mypage/login.html">로그인</a>
+                            </li> <!-- mobilemenu-login -->
+                            
+                            <li class="mobilemenu-mypage mobilemenu">
+                                <a href="./../mypage/mypage.html">내 정보</a>
+                            </li> <!-- mobilemenu-mypage -->
+                            
+                            <li class="mobilemenu-reservation mobilemenu">
+                                <a href="./../mypage/booking.html">예약·예매</a>
+                            </li> <!-- mobilemenu-reservation -->
+                        </ul> <!-- login-flex-box -->
+                    </li> <!-- mobilemenu-box -->
+                </ul> <!-- mobile-gnb -->
+            </div> <!-- mobilemenu -->
+        </div> <!-- header-mobile -->
+        <script src="./js/mobile-menu.js"></script>
+        
+        <ul class="topmenu"> <!-- 현재 페이지 li.submenu 클래스에 selected 삽입 -->
+            <li class="submenu">
+                <a href="./../history/history.html">경복궁의 역사</a>
+            </li>
+            <li class="submenu">
+                <a href="./../history/converse.html">알고싶은 이야기</a>
+            </li>
+            <li class="submenu selected">
+                <a href="./../history/restoration.html">복원사업에 관해</a>
+            </li>
+        </ul> <!-- topmenu -->
+    </header>
+
+    <main>
+        <aside>
+            <div class="sidemenu">
+                <h1 class="header-logo">
+                    <a href="./../../index.html">
+                        <img src="./../../images/logo.svg" alt="main-logo">
+                    </a>
+                </h1>
+                <ul class="gnb"> <!-- 현재 페이지 li.menu 클래스에 selected 삽입 -->
+                    <li class="sidemenu-home menu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li> <!-- sidemenu-home -->
+    
+                    <li class="sidemenu-history menu selected">
+                        <a href="./../history/history.html">역사 알기</a>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html" class="selected">복원사업에 관해</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-history -->
+    
+                    <li class="sidemenu-map menu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li> <!-- sidemenu-map -->
+    
+                    <li class="sidemenu-info menu">
+                        <a href="./../info/time-price.html">관람 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-info -->
+    
+                    <li class="sidemenu-event menu">
+                        <a href="./../event/alternating.html">행사 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html">생과방</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-event -->
+    
+                    <li class="sidemenu-notice menu ">
+                        <a href="./../notice/notice.html">소식 알림</a>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-notice -->
+    
+                    <li class="sidemenu-login menu">
+                        <a href="./../mypage/login.html">로그인</a>
+                    </li> <!-- sidemenu-login -->
+    
+                    <li class="sidemenu-mypage menu">
+                        <a href="./../mypage/mypage.html">내 정보</a>
+                    </li> <!-- sidemenu-mypage -->
+    
+                    <li class="sidemenu-reservation menu">
+                        <a href="./../mypage/booking.html">예약·예매</a>
+                    </li> <!-- sidemenu-reservation -->
+                </ul> <!-- gnb -->
+            </div> <!-- sidemenu -->
+        </aside>
+        
+        <section class="main-sec">
+            <h2 style="font-size: 0;">첫번째 section</h2>
+            <section class="des-1">
+                <h2 style="font-size: 0;">두번째 section</h2>
+                <div class="des-1-converse-image">
+                    <div class="des-1-image1" id="imageOne" style="display: block;">
+                        <div class="des-1-text">
+                            <span style="background-color: blue;"></span> 파란색 - 흥선대원군 때 중건하여 현재까지 남아있는 부분<br>
+                            <span style="background-color: yellow;"></span> 노란색 - 1990년 이전에 복원한 부분
+                        </div> <!-- des-1-text -->
+                        <img src="./images/1.png" alt="복원1">
+                    </div> <!-- "des-1-image1 -->
+                    <div class="des-1-image1" id="imageTwo">
+                        <div class="des-1-text">
+                            <span style="background-color: red;"></span> 빨간색 - 1차 복원 정비사업(1990~2010)으로 복원한 부분<br>
+                            <span></span>
+                        </div> <!-- des-1-text -->
+                        <img src="./images/2.png" alt="복원2">
+                    </div> <!-- des-1-image1 -->
+                    <div class="des-1-image1" id="imageThr">
+                        <div class="des-1-text">
+                            <span style="background-color: orange;"></span> 주황색- 2차 복원 정비사업(2011~2030예정)으로 복원될 부분<br>
+                            <span></span>
+                        </div> <!-- des-1-text -->
+                        <img src="./images/3.png" alt="복원3">
+                    </div> <!-- des-1-image1 -->
+                </div> <!-- des-1-converse-image -->
+            </section>
+    
+            <section class="des-2">
+                <h2 style="font-size: 0;">세번째 section</h2>
+                <div class="des-2-wrap">
+                    <div class='css3-tab'>
+                        <input type='radio' name='a' id='tabOne' tabindex="1" checked>
+                        <input type='radio' name='a' id='tabTwo' tabindex="2">
+                        <input type='radio' name='a' id='tabThr' tabindex="3">
+                    
+                        <div class="css3-tab-nav">
+                            <label for='tabOne'>복원사업</label>
+                            <label for='tabTwo'>1차 복원사업</label>
+                            <label for='tabThr'>2차 복원사업</label>
+                        </div> <!-- css3-tab-nav -->
+                    
+                        <div class='css3-tab-content tab-one'>
+                            <p>
+                                &nbsp;광복 이후 경복궁을 다시 복원하려는 노력이 여러 차례 있었으나, 무산되거나 체계적이지 않게 복원되었다. 1955년부터 구황실재산사무총국이 경복궁사무소를 설치해 관리하기 시작했다.<br><br>
+                                &nbsp;1990년에 들어서 2030년 완료를 목표로 경복궁 복원사업을 시작하였다. 1915년 조선총독부 미술관으로 건립되어 공진회 이후 박물관으로 사용된 철근콘크리트 건물을 1995년 철거 하였으며, 1926년 건립된 조선총독부 청사를 1997년 철거, 1935년 건립된 조선총독부 미술관을 1999년 철거, 일제강점기 때 건립된 것으로 추정된 수정전 남측의 한식 건물인 무명각을 1998년 철거했다. 다만 조선총독부 박물관 창고로 건립(1915년)된 부속 건물은 현재 경복궁 관리소로 사용 중이다. 2010년 기준으로, 경복궁 1차 복원정비사업이 완료되어 89동의 건물이 복원됐다.<br><br> 
+                                &nbsp;일제의 철거를 피해 남아 있던 건물 36동을 포함해 현재 총 125동의 건물이 들어서 고종 당시 경복궁 건물 500여 동의 약 25% 수준에 도달하였다. 2010년 9월 이후 광화문 권역이 완전 개방되었다.<br><br>
+                                &nbsp;2011년부터 약 20년에 걸쳐 경복궁 전각을 76%까지 복원하는 2차 복원정비사업이 추진 중으로 1차 복원이 중심 건물들로 경복궁의 뼈대를 갖추는 것이었다면, 2차 복원은 임금의 수라간과 궐내각사 등 많은 부속건물을 지어 살을 붙이는 과정이다.
+                            </p>
+                        </div> <!-- css3-tab-content, tab-one -->
+                    
+                        <div class='css3-tab-content tab-two'>
+                            <p>
+                                &nbsp;지난 1990년 시작하여 당초 2009년 완료될 예정이었던 1단계 종합정비 사업은 총 1789억원의 예산을 투입하여 강녕전 등 93동을 복원할 계획이었다. 사업기간을 1년 연장한 2010년 기준으로 1572억원의 예산이 투입되어 89동의 건물이 복원되었다.<br><br>
+                                &nbsp;일제의 철거를 피하여 남아 있던 건물 36동을 포함하여 현재 총 125동의 건물이 들어서 고종 당시 500여 동의 25% 정도 수준까지 도달하였다.<br><br>
+                                &nbsp;사업기간 중만성 옛 조선총독부 청사와 옛 조선 총독부박물관(국립민속박물관), 옛 조선 총독부 미술관(전통공예전시관) 등을 철거하고 광화문을 이전 복원한 데서 나타나듯 일제의 유산인 네거티브 문화재를 철거하고 조선 정궁의 기본 궁제(宮制)를 완비하는 것이 1단계 종합정비 사업의 목표였다.<br><br>
+                                · <strong>1단계</strong>  :  강녕전, 교태전 등 침전 권역 12동  복원<br>
+                                · <strong>2단계 (1994년 ~ 1999년)</strong> :  자선당, 비현각 등 동궁 권역 18동 복원<br>
+                                · <strong>3단계 (1996년 ~ 2001년)</strong> : 흥례문 등, 흥례문 권역  6동 복원<br>
+                                · <strong>4단계 (1997년 ~ 2005년)</strong> : 태원전 등, 태원전 권역 25동 복원<br>
+                                · <strong>5단계 (2001년 ~ 2010년)</strong> : 광화문, 건청궁, 함화당, 집경당 등 기타 권역 복원 32동 복원<br>
+                                · <strong>광화문 제 모습 찾기 사업 (2006년 ~ 2010년)</strong> : 광화문 권역 복원
+                            </p>
+                        </div> <!-- css3-tab-content, tab-two -->
+                    
+                        <div class='css3-tab-content tab-Thr'>
+                            <p>
+                                &nbsp;문화재청은 2010년 1차 복원 정비 사업이 완료된 후 2011년부터 2030년까지 20년 계획의 제2차 경복궁 종합정비 사업을 추진하고 있다. <br><br>
+                                · <strong>1단계 궁중생활 권역 (2011년 ~ 2021년)</strong> : 소주방 영역, 흥복전 영역 등 총 28동 원형 복원 등 기단·초석으로 복원.<br><br>
+                                · <strong>2단계 제왕교육 권역 (2019년 ~ 2023년)</strong> : 동궁영역, 건춘문영역, 오위도총부 영역 총 14동 원형 복원 등 기단·초석으로 복원.<br><br>
+                                · <strong>3단계 궁중통치 권역 ( 2026년 ~ 2034년)</strong> : 영추문 영역, 궐내각사 영역, 등 총 14동 원형 복원 등 기단·초석으로 복원.<br><br>
+                                · <strong>4단계 궁중의례 권역 (2031년 ~ 2042년)</strong> : 문경전 및 회안전 영역, 신무문 영역, 만경전 권역, 선원전 권역, 등 총 23동 원형 복원 등 기단·초석으로 복원.<br><br>
+                                · <strong>5단계 궁중방어 권역 (2040년 ~ 2045년)</strong> : 서십자각 영역, 동십자각 궁장 복원.
+                            </p>
+                        </div> <!-- css3-tab-content, tab-Thr -->
+                    </div> <!-- css3-tab -->  
+                </div> <!-- des-2-wrap -->
+            </section>
+        </section> <!-- main-sec -->
+
+    </main>
+    <footer>
+        <div class="wrapper">
+            <div class="policy">
+                <ul>
+                    <li><a href="./../service/privacy.html">개인정보처리방침</a></li>
+                    <li><a href="./../service/copyright.html">저작권정책</a></li>
+                    <li><a href="https://www.cha.go.kr/cop/bbs/selectBoardNameCheck.do?bbsId=BBSMSTR_1049&checkType=regist" target="_blank">개인정보침해신고센터</a></li>
+                </ul>
+            </div> <!-- policy -->
+            
+            <div class="copyright">
+                <div class="footer-logo">
+                    <img src="./../../images/logo.svg" alt="footer-logo">
+                </div>
+                <div class="contact">
+                    <p>문화재청 경복궁</p>
+                    <p>우)03045 서울특별시 종로구 사직로 161<br>전화번호 (02) 3700-3900 팩스 (02) 3700-3909</p>
+                    <p>COPYRIGHT 2022 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div> <!-- copyright -->
+        </div> <!-- wrapper -->
+    </footer>
+    <script src="./js/restoration.js"></script>
+</body>
+</html>

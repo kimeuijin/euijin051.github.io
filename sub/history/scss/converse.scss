@@ -1,0 +1,204 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include topmenu-pc();
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+// aside
+aside {
+    @include sidemenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include sidemenu-pc();
+    }
+}
+
+section.main-flex {
+    overflow: hidden;
+    margin-top: 70px;
+    width: 100%;
+
+    
+    section.des-1 {
+        
+        .swiper {
+            margin-left: 5%;
+            width: 100%;
+            height: 100%;
+
+            @include responsive(tablet-size) {
+                @include wrapper();
+                overflow: hidden;
+                margin-top: 70px;
+            }
+
+            .swiper-wrapper {
+
+                .swiper-slide {
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+
+                    a {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+    
+                        .des-img {
+                            width: 100%;
+                            height: 100%;
+            
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0.15;
+                                transition: all 1s;
+                            }
+                        }
+                        .des-1-text {
+                            position: absolute;
+                            width: 250px;
+                            top: 50%; left: 50%;
+                            transform: translate(-50%,-50%);
+                            p {
+                                font-size: 20px;
+                                font-weight: bold;
+                                opacity: 0.8;
+                                color:#474646;
+                            } 
+                        }
+                        &:hover {
+                            img {
+                                opacity: 1;
+                            }
+                            p {
+                                opacity: 1;
+                                color: white;
+                            }
+                        }
+                        &.selects {
+                            img {
+                                opacity: 1;
+                            }
+                            p {
+                                opacity: 1;
+                                color: white;
+                            }
+                        }
+                    }
+                } // swiper-slide
+            } // swiper-wrapper
+        } // swiper
+    } // section.des-1
+    
+    
+
+    section.des-2 {
+        margin-top: 90px;
+        margin-bottom: 90px;
+
+        .des-2-wrapper {
+            @include wrapper();
+            
+            .des-2-text {
+                .show-one,
+                .show-two,
+                .show-thr,
+                .show-four,
+                .show-five {
+                    display: none;
+                }
+                .on {
+                    display: none;
+                }
+                
+                .des-2-flex{
+                    margin-top: 50px;
+
+                    @include responsive(pc-size) {
+                        display: flex;
+                        justify-content: center;
+                        width: 92%;
+                        margin: 0 auto;
+                        margin-top: 50px;
+                    }
+
+                    .des-2-left{
+                        
+                        img {
+                            display: none;
+
+                            @include responsive(pc-size) {
+                                width: 50%;
+                                display: block;
+                                width: 400px;
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+
+                    .des-2-right{
+                        @include responsive(pc-size) {
+                            width: 50%;
+                            margin-left: 30px;
+                        }
+                        
+                        h2{
+                            font-size: 26px;
+                            text-align: center;
+                            font-weight: bold;
+                            margin-bottom: 20px;
+
+                            @include responsive(tablet-size) {
+                                text-align: start;
+                            }
+                        }
+                        p {
+                            line-height: 1.4em;
+                            text-align: justify;
+                        }
+                    }
+                } // des-2-flex
+            } // des-2-text
+        } // des-2-wrapper
+    } // section.des-2
+} // section.main-flex
+
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}

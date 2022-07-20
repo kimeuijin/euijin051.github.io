@@ -1,0 +1,93 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+    @include responsive(tablet-size) {
+        @include topmenu-pc();
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+// aside
+aside {
+    @include sidemenu-mobile();
+    @include responsive(tablet-size) {
+        @include sidemenu-pc();
+    }
+}
+
+//section
+section {
+    @include wrapper();
+    h2 {
+        text-align: center;
+        margin: 50px 0;
+        font-size: 1.875em;
+    }
+    .map-all{
+        @include responsive(pc-size) {
+            display: flex;
+        }
+        .map{
+            width: 100%;
+            margin-right: 45px;
+            iframe {
+                width: 100%;
+                height: 300px;
+                @include responsive(pc-size) {
+                    height: 578px;
+                }
+            }
+            a {
+                float: right;
+                border: 1px solid black;
+                padding: 7px 20px;
+                margin-top: 15px;
+                background-color: #f2ece4;
+                font-family: $font-sans;
+            }
+        }
+        
+        .subway{
+            width: 100%;
+            margin-top: 150px;
+            @include responsive(pc-size) {
+                margin-top: 0px;
+            }
+            .subwayText{
+                margin-bottom: 100px;
+                word-break: keep-all;
+                h3{
+                    padding-bottom: 40px;
+                }
+            }
+            .subwayText:last-child{
+                @include responsive(pc-size) {
+                    margin-bottom: 0px;
+                }
+            }
+
+        }
+    }
+}
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}

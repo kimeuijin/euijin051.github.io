@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" property="og:title" content="경복궁">
+    <meta name="images" property="og:image" content="./../../images/meta-image.jpg">
+    <meta name="description" property="og:description" content="경복궁의 알고싶은이야기">
+    <meta name="type" property="og:type" content="article">
+    <meta name="Description" content="알고싶은 이야기">
+    <meta name="Author" content="Dong">
+    <link rel="shortcut icon" href="./../../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/converse.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/converse.js"></script>
+    <title>알고싶은 이야기</title>
+
+</head>
+<body>
+    <header>
+        <div class="header-mobile">
+            <div class="header-flex-box">
+                <h1 class="logo">
+                    <a href="./../../index.html">
+                        <img src="./../../images/logo_wt.svg" alt="main-logo">
+                    </a>
+                </h1> <!-- logo -->
+                <div class="hamburger">
+                    <input type="checkbox" id="menu">
+                    <label for="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div> <!-- hamburger -->
+            </div> <!-- header-flex-box -->
+            
+            <div class="mobilemenu">
+                <ul class="mobile-gnb">
+                    <li class="mobilemenu-home mobilemenu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li> <!-- mobilemenu-home -->
+    
+                    <li class="mobilemenu-history mobilemenu selected">
+                        <button class="accordion">역사 알기</button>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html" class="selected">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html">복원사업에 관해</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-history -->
+                    
+                    <li class="mobilemenu-map mobilemenu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li> <!-- mobilemenu-map -->
+                    
+                    <li class="mobilemenu-info mobilemenu">
+                        <button class="accordion">관람 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-info -->
+    
+                    <li class="mobilemenu-event mobilemenu">
+                        <button class="accordion">행사 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html">생과방</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-event -->
+                    
+                    <li class="mobilemenu-notice mobilemenu ">
+                        <button class="accordion">소식 알림</button>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-notice -->
+                    
+                    <li class="mobilemenu-box">
+                        <ul class="login-flex-box">
+                            <li class="mobilemenu-login mobilemenu">
+                                <a href="./../mypage/login.html">로그인</a>
+                            </li> <!-- mobilemenu-login -->
+                            
+                            <li class="mobilemenu-mypage mobilemenu">
+                                <a href="./../mypage/mypage.html">내 정보</a>
+                            </li> <!-- mobilemenu-mypage -->
+                            
+                            <li class="mobilemenu-reservation mobilemenu">
+                                <a href="./../mypage/booking.html">예약·예매</a>
+                            </li> <!-- mobilemenu-reservation -->
+                        </ul> <!-- login-flex-box -->
+                    </li> <!-- mobilemenu-box -->
+                </ul> <!-- mobile-gnb -->
+            </div> <!-- mobilemenu -->
+        </div> <!-- header-mobile -->
+        <script src="./js/mobile-menu.js"></script>
+        
+        <ul class="topmenu"> <!-- 현재 페이지 li.submenu 클래스에 selected 삽입 -->
+            <li class="submenu">
+                <a href="./../history/history.html">경복궁의 역사</a>
+            </li>
+            <li class="submenu selected">
+                <a href="./../history/converse.html">알고싶은 이야기</a>
+            </li>
+            <li class="submenu">
+                <a href="./../history/restoration.html">복원사업에 관해</a>
+            </li>
+        </ul> <!-- topmenu -->
+    </header>
+
+    <main>
+        <aside>
+            <div class="sidemenu">
+                <h1 class="header-logo">
+                    <a href="./../../index.html">
+                        <img src="./../../images/logo.svg" alt="main-logo">
+                    </a>
+                </h1>
+                <ul class="gnb"> <!-- 현재 페이지 li.menu 클래스에 selected 삽입 -->
+                    <li class="sidemenu-home menu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li> <!-- sidemenu-home -->
+    
+                    <li class="sidemenu-history menu selected">
+                        <a href="./../history/history.html">역사 알기</a>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html" class="selected">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html">복원사업에 관해</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-history -->
+    
+                    <li class="sidemenu-map menu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li> <!-- sidemenu-map -->
+    
+                    <li class="sidemenu-info menu">
+                        <a href="./../info/time-price.html">관람 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-info -->
+    
+                    <li class="sidemenu-event menu">
+                        <a href="./../event/alternating.html">행사 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html">생과방</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-event -->
+    
+                    <li class="sidemenu-notice menu ">
+                        <a href="./../notice/notice.html">소식 알림</a>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-notice -->
+    
+                    <li class="sidemenu-login menu">
+                        <a href="./../mypage/login.html">로그인</a>
+                    </li> <!-- sidemenu-login -->
+    
+                    <li class="sidemenu-mypage menu">
+                        <a href="./../mypage/mypage.html">내 정보</a>
+                    </li> <!-- sidemenu-mypage -->
+    
+                    <li class="sidemenu-reservation menu">
+                        <a href="./../mypage/booking.html">예약·예매</a>
+                    </li> <!-- sidemenu-reservation -->
+                </ul> <!-- gnb -->
+            </div> <!-- sidemenu -->
+        </aside>
+
+        <section class="main-flex">
+            <h2 style="font-size: 0;">첫번째 section</h2>
+            <section class="des-1">
+                <h2 style="font-size: 0;">두번째 section</h2>
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide selects" id="slideOne">
+                            <a href="#" >
+                                <div class="des-img one-1">
+                                    <img src="./images/select1.png" alt="select1">
+                                </div> <!-- des-img one-1 -->
+                                <div class="des-1-text top">
+                                    <p>경복궁 만드는데<br>얼마나 걸렸을까?</p>
+                                </div> <!-- des-1-text top -->
+                            </a>
+                        </div> <!-- swiper-slide -->
+
+                        <div class="swiper-slide" id="slideTwo">
+                            <a href="#">
+                                <div class="des-img">
+                                    <img src="./images/select2.png" alt="select2">
+                                </div> <!-- des-img -->
+                                <div class="des-1-text top">
+                                    <p>한글은 어디서<br>만들어졌을까?</p>
+                                </div> <!-- des-1-text top -->
+                            </a>
+                        </div> <!-- swiper-slide -->
+
+                        <div class="swiper-slide" id="slideThr">
+                            <a href="#">
+                                <div class="des-img">
+                                    <img src="./images/select3.png" alt="select3">
+                                </div> <!-- des-img -->
+                                <div class="des-1-text">
+                                    <p>조선시대<br>임금의 하루일과는<br>어땠을까?</p>
+                                </div> <!-- des-1-text -->
+                            </a>
+                        </div> <!-- swiper-slide -->
+
+                        <div class="swiper-slide" id="slideFour">
+                            <a href="#">
+                                <div class="des-img">
+                                    <img src="./images/select4.png" alt="select4">
+                                </div> <!-- des-img -->
+                                <div class="des-1-text">
+                                    <p>조선시대<br> 경복궁에는 몇 명이<br> 살고 있었을까?</p>
+                                </div> <!-- des-1-text -->
+                            </a>
+                        </div> <!-- swiper-slide -->
+
+                        <div class="swiper-slide" id="slideFive">
+                            <a href="#">
+                                <div class="des-img"> 
+                                    <img src="./images/select5.png" alt="select5">
+                                </div> <!-- des-img -->
+                                <div class="des-1-text">
+                                    <p> 명성황후는<br>어디에서<br>시해되었나?</p>
+                                </div> <!-- des-1-text -->
+                            </a>
+                        </div> <!-- swiper-slide -->
+                    </div> <!-- swiper-wrapper -->
+
+                    <div class="swiper-pagination"></div>
+                </div> <!-- swiper mySwiper -->
+            </section>
+            
+            <section class="des-2">
+                <h2 style="font-size: 0;">세번째 section</h2>
+                <div class="des-2-wrapper">
+                    <div class="des-2-text">
+                        <div class="show-one">
+                            <div class="des-2-flex">
+                                <div class="des-2-left">
+                                    <img src="./images/text-images1.jpg" alt="images1" >
+                                </div> <!-- des-2-left -->
+                                <div class="des-2-right">
+                                    <h2>경복궁을 만드는데 얼마나 걸렸을까?</h2>
+                                    <p> 
+                                        태조 임금님이 새로운 나라 조선을 세우고 가장 먼저 시작한 일은 왕의 조상님들을 모시는 ‘종묘’를 짓고 왕실가족과 나랏일을 돕는 신하들이 머무르는 ‘궁궐’을 짓는 일이었습니다. 궁궐을 짓는데 걸린 시간은 10개월 정도였습니다.<br><br>
+                                        궁궐 공사 이전에 먼저 땅을 잘 살피는 조사를 하였고 태조 3년(1395) 12월부터 공사를 시작하여 다음해 9월에 완성하였습니다.<br><br>
+                                        궁궐 안에는 나랏일을 의논하는 곳, 왕과 왕비께서 사는 곳, 신하들이 출근해서 일하는 곳, 궁궐담장과 출입문 등이 있었고 궁궐의 이름을 ‘경복궁’이라고 지었답니다.
+                                    </p>
+                                </div> <!-- des-2-right -->
+                            </div> <!-- des-2-flex -->
+                        </div> <!-- show-one -->
+
+                        <div class="show-two">
+                            <div class="des-2-flex">
+                                <div class="des-2-left">
+                                    <img src="./images/text-images2.png" alt="images2">
+                                </div> <!-- des-2-left -->
+                                <div class="des-2-right">
+                                    <h2>한글은 어디서 만들어졌을까?</h2>
+                                    <p> 
+                                        세종대왕과 집현전 학자들은 많은 사람들이 편리하게 글자를 사용하도록 ‘훈민정음’을 만들었어요. 다른 나라 글자들은 많은 세월이 지나면서 만들어지고 누가 만들었는지 정확히 알 수 없지요. 하지만 한글은 만든 사람들과 만든 시간을 알 수 있고 과학적이기 때문에 외국 사람들의 부러움을 사고 있어요. 그리고 한글은 훌륭한 문화유산으로 인정을 받아서 세계문화유산으로 등록되었습니다.<br><br>
+                                        <strong>한글을 발명한 장소인 집현전은 지금의 수정전 자리에 있었으나 안타깝게도 임진왜란 때 소실되었습니다.</strong>
+                                    </p>
+                                </div> <!-- des-2-right -->
+                            </div> <!-- des-2-flex -->
+                        </div> <!-- show-two -->
+                        
+                        <div class="show-thr">
+                            <div class="des-2-flex">
+                                <div class="des-2-left">
+                                    <img src="./images/text-images3.jpg" alt="images3">
+                                </div> <!-- des-2-left -->
+                                <div class="des-2-right">
+                                    <h2>조선시대 임금의 하루일과는 어땠을까?</h2>
+                                    <p> 
+                                        임금님은 무척 바쁜 하루를 보냅니다.<br>
+                                        임금님이 해야 할 일은 만 가지 넘는다고 하는데, 임금님의 하루는 대개 어른들께 인사를 드리고 신하들을 만나서 나랏일을 의논합니다. 그리고 나라를 잘 다스리기 위해서 공부도 열심히 하셨지요. 하루에 3번 이상 공부하는 시간이 있었고 저녁 늦게 신하들을 불러서 궁금한 것을 묻기도 했어요. 임금님이 하시는 공부는 유교와 역사 공부를 많이 하셨어요. 가장 중요한 공부는 몸과 마음을 바르게 하는 것이었지요.<br><br> 
+                                        임금님의 하루는 조금씩 다를 수 있지만 시간별로 알아보면 임금님이 아침에 일어나시면 부모님께 잘 지내셨는지 인사를 드립니다. 그리고 아침 식사를 하기 전에 신하들을 만나고 공부를 하십니다. 아침을 드신 후에 어떤 일이 있었는지 신하들에게 이야기를 듣습니다. 점심시간이 되면, 간단하게 식사를 하시고 공부를 하세요. 그리고 지방으로 떠나는 신하들을 만나고 다른 일을 보십니다. 저녁에는 궁궐을 잘 지키기 위해서 밤을 새는 신하들이 누구인지 확인을 하고 궁궐에 들어오고 나갈 때 사용되는 암호를 정하기도 합니다. 저녁이 되면, 식사를 하시고 낮에 다 하지 못한 일들을 마무리 하시죠. 그리고 어른들께 잘 주무시라고 인사를 드립니다. 하루의 일을 마치시면 잠시 쉬기도 하지만 책을 읽거나 궁궐에 있는 신하를 불러서 궁금한 점을 물어보기도 합니다.<br><br>
+                                        이렇게 하루를 마치면 편안히 잠자리에 드십니다.
+                                    </p>
+                                </div> <!-- des-2-right -->
+                            </div> <!-- des-2-flex -->
+                        </div> <!-- show-Thr -->
+            
+                        <div class="show-four">
+                            <div class="des-2-flex">
+                                <div class="des-2-left">
+                                    <img src="./images/text-images4.jpg" alt="images4">
+                                </div> <!-- des-2-left -->
+                                <div class="des-2-right">
+                                    <h2>조선시대 경복궁에는 몇 명이 살고 있었을까?</h2>
+                                    <p> 
+                                        궁궐은 나라를 다스리는 왕과 그 가족들이 생활을 하던 곳입니다. 그리고 왕과 왕비를 도와서 여러 가지 일을 하는 사람들이 있었지요. 나랏일을 보는 관리, 왕실가족들이 생활하는데 불편하지 않도록 일을 하는 궁녀와 내시, 궁궐을 지키는 군인, 음식을 만드는 요리사와 병을 고치는 의사 등 많은 사람들이 궁궐에서 살거나 출입을 하면서 일을 했습니다.<br><br>
+                                        <strong>그러면 경복궁에는 몇 명이 살고 있었을까요?</strong><br>
+                                        정확히는 알 수 없지만 대개 3000명 정도가 궁궐에서 살거나 궁궐을 드나들었다고 합니다. 왕실가족, 궁녀, 내시 등이 500명 정도이고 궁궐을 지키는 군인이 2,000명 정도 그리고 나랏일을 보는 신하들과 궁궐에서 일하는 사람이 500명 정도입니다.
+                                    </p>
+                                </div> <!-- des-2-right -->
+                            </div> <!-- des-2-flex -->
+                        </div> <!-- show-four -->
+            
+                        <div class="show-five">
+                            <div class="des-2-flex">
+                                <div class="des-2-left">
+                                    <img src="./images/text-images5.jpg" alt="images5">
+                                </div> <!-- des-2-left -->
+                                <div class="des-2-right">
+                                    <h2>명성황후는 어디에서 시해되었나?</h2>
+                                    <p> 
+                                        명성황후는 향원정 북쪽에 있는 건청궁 곤녕합에서 일본인들에게 시해되었어요. 일본은 조선을 지배하려고 했는데 명성황후가 러시아와 친하게 지내려고 하자 명성황후를 시해한 것이죠.<br><br> 
+                                        <strong>어떻게 일본은 경복궁에 들어와 명성황후를 시해했을까요?</strong><br>
+                                        1895년 10월 8일 새벽, 경복궁 광화문으로 들어와 근정전 서쪽 담장을 돌아서 경복궁 뒤편에 있는 건청궁으로 몰래 들어갔어요. 건청궁에는 임금님이 계시던 장안당과 명성황후가 계시던 곤녕합이 있었는데 일본인들이 곤녕합으로 가서 명성황후를 살해했다고 합니다.<br>
+                                        명성황후가 숨을 거두자 건청궁 동쪽에 있던 언덕(녹산)에서 시체를 태우고 재는 향원정 연못에 버리고 타다남은 시신은 녹산에 묻었다고 합니다. 정말 끔찍한 일이죠. 궁궐을 침입하여 한 나라의 왕비를 죽인 일은 제국주의 일본의 야만성을 드러낸 것이지요.
+                                    </p>
+                                </div> <!-- des-2-right -->
+                            </div> <!-- des-2-flex -->
+                        </div> <!-- show-five -->
+                    </div> <!-- des-2-text -->
+                </div> <!-- des-2-wrapper -->
+            </section>
+        </section> <!-- main-flex -->
+        
+    </main>
+    <footer>
+        <div class="wrapper">
+            <div class="policy">
+                <ul>
+                    <li><a href="./../service/privacy.html">개인정보처리방침</a></li>
+                    <li><a href="./../service/copyright.html">저작권정책</a></li>
+                    <li><a href="https://www.cha.go.kr/cop/bbs/selectBoardNameCheck.do?bbsId=BBSMSTR_1049&checkType=regist" target="_blank">개인정보침해신고센터</a></li>
+                </ul>
+            </div> <!-- policy -->
+            
+            <div class="copyright">
+                <div class="footer-logo">
+                    <img src="./../../images/logo.svg" alt="footer-logo">
+                </div>
+                <div class="contact">
+                    <p>문화재청 경복궁</p>
+                    <p>우)03045 서울특별시 종로구 사직로 161<br>전화번호 (02) 3700-3900 팩스 (02) 3700-3909</p>
+                    <p>COPYRIGHT 2022 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div> <!-- copyright -->
+        </div> <!-- wrapper -->
+    </footer>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            "@0.00": {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            "@0.75": {
+              slidesPerView: 2.5,
+              spaceBetween: 20,
+            },
+            "@1.00": {
+              slidesPerView: 3.5,
+              spaceBetween: 40,
+            },
+            "@1.50": {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+          },
+        });
+      </script>
+</body>
+</html>

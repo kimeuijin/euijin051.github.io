@@ -1,0 +1,298 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu.scss";
+@import "./_mixin-line.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include topmenu-pc();
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+// aside
+aside {
+    @include sidemenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include sidemenu-pc();
+    }
+}
+
+//section
+section.event {
+    width: 100%;
+    h2 {
+        display: none;
+    }
+
+    .img-text {
+        margin-top: 50px;
+        position: relative;
+        margin-bottom: 55px;
+
+        .main-text {
+            text-align: right;
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translate(-10%, -50%);
+            color: white;
+            font-family: serif;
+
+            @include responsive(tablet-size) {
+                top: 50%;
+                right: 10%;
+            }
+
+            h3 {
+                font-size: 25px;
+                @include responsive(tablet-size) {
+                    font-size: 30px;
+                    margin-bottom: 30px;
+                }
+                @include responsive(pc-size) {
+                    font-size: 44px;
+                    margin-bottom: 74px;
+                }
+            }
+
+            p {
+                display: none;
+                @include responsive(tablet-size) {
+                    display: block;
+                    font: {
+                        size: 16px;
+                        family: $font-serif;
+                        weight: 100;
+                    }
+                }
+                @include responsive(pc-size) {
+                    font: {
+                        size: 21px;
+                        weight: 100;
+                    }
+                    line-height: 1.5em;
+                }
+            }
+
+            .person {
+                @include responsive(tablet-size) {
+                    margin-top: 15px;
+                }
+                @include responsive(pc-size) {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    .wrapper-box {
+        @include wrapper();
+        @include responsive(pc-size) {
+            width: 95%;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 90px;
+            font-size: 18px;
+            line-height: 2em;
+
+            
+            @include responsive(pc-size) {
+                flex-direction: row;
+                justify-content: space-between;          
+            }
+            
+            @include line-deco();
+            
+            .line-flex {
+                width: 19%;;
+            }
+    
+            .info-text-mobile {
+                p {
+                    font-size: 18px;
+                    line-height: 2em;
+                }
+                display: block;
+                @include responsive(tablet-size) {
+                    display: block;
+                }
+                @include responsive(pc-size) {
+                    display: none;
+                }
+            }
+            .info-text-pc {
+                p {
+                    font-size: 18px;
+                    line-height: 2em;
+                }
+                display: none;
+                @include responsive(tablet-size) {
+                    display: none;
+                }
+                @include responsive(pc-size) {
+                    display: block;
+                    margin-top: 20px;
+                    width: 80%;
+                }
+            }
+
+        }//info
+    
+        .procedure {
+            display: flex;
+            flex-direction: column;
+            
+            @include responsive(pc-size) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+    
+            @include line-deco();
+    
+            .line-flex {
+                width: 19%;;
+            }
+    
+            .pro-flex-img {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                justify-content: center;
+
+                div {
+                    width: 48%;
+                    padding: 3px;
+                    p {
+                        margin-bottom: 18px;
+                        font-size: 0.75em;
+                        @include responsive(tablet-size) {
+                            font-size: 0.85em;
+                        }
+                        @include responsive(pc-size) {
+                            font-size: 1.2em;                        }
+                    }
+        
+                    img {
+                        margin-bottom: 35px;
+                    }
+    
+                    @include responsive(tablet-size) {
+                        width: 33%;
+                        padding: 5px;
+                    }
+                    @include responsive(pc-size) {
+                        width: 24.1%;
+                        margin-top: 20px;
+                    }
+                }
+                
+                @include responsive(tablet-size) {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                }
+    
+                @include responsive(pc-size) {
+                    width: 80%;
+                    justify-content: space-between;
+                }
+            }
+    
+            margin-bottom: 90px;
+        } //procedure
+    
+        .operation {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 90px;
+            
+            @include responsive(pc-size) {
+                flex-direction: row;
+                justify-content: space-between;           
+            }
+            
+            
+            .line-flex {
+                @include line-deco();
+            }
+ 
+            .operation-info {
+                .operation-term {
+                    margin-bottom: 40px;
+                    .operation-info-box {
+                        background-color: #cec4b6;
+                        padding: 10px;
+                        margin-bottom: 10px;
+
+                        @include responsive(pc-size) {
+                            margin-bottom: 33px;
+                            height: 145px;
+                            padding: 0 45px;
+                            text-align: center;
+                            padding-top: 30px;
+                        }
+
+                        p {
+                            width: 100%;
+                        }
+                    }
+
+                    @include responsive(pc-size) {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+
+                    .info-center {
+                        width: 80%;
+                    }
+                }
+
+                @include responsive(pc-size) {
+                    width: 80%;
+                    margin-top: 20px;
+                }
+            }
+            p {
+                font-size: 18px;
+                line-height: 2em;
+
+                @include responsive(pc-size) {
+                    width: 80%;
+                    margin-top: 20px;
+                }
+            }
+        } //operation
+    } //wrapper-box
+}
+
+
+
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}

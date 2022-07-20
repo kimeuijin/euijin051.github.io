@@ -1,0 +1,138 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include topmenu-pc();
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+// aside
+aside {
+    @include sidemenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include sidemenu-pc();
+    }
+}
+
+//section
+section {
+    @include wrapper();
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+    > h2 {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $color-main;
+    }
+
+    .main-privacy {
+        text-align: justify;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        border: 2px solid #ccc;
+        color: $color-main;
+        opacity: 0.8;
+    }
+
+    ul > li {
+        margin-top: 40px;
+
+        h2 {
+            font-family: $font-sans;
+            font-weight: bold;
+            font-size: 1.3em;
+            text-align: justify;
+            margin-bottom: 20px;
+            color: $color-main;
+            opacity: 0.8;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 1em;
+            text-align: justify;
+            margin-bottom: 10px;
+            color: $color-main;
+            opacity: 0.8;
+        }
+
+        ol {
+
+            li {
+                text-align: justify;
+                line-height: 20px;
+                padding: 3px 0;
+                color: $color-main;
+                opacity: 0.8;
+                a {
+                    display: inline-block;
+                    &:hover {
+                        color: blue;
+                    }
+                }
+            }
+
+            .table-3 {
+
+                h3, p {
+                    font-weight: 400;
+                    font-size: 1em;
+                    padding: 3px 0;
+                }
+
+                table,
+                tr,
+                th,
+                td {
+                    border: 1px solid $color-border;
+                    border-collapse: collapse; 
+                }
+
+                table {
+                    width: 100%;
+                    text-align: center;
+
+                    th, td {
+                        padding: 5px;
+                    }
+
+                    td {
+                        background-color: $color-white;
+                    }
+
+                    td > br {
+                        @include responsive(tablet-size) {
+                            display: none;
+                        }
+                    }
+                }
+            } // table-3
+        } // ol
+    } // ul > li
+}
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}

@@ -1,0 +1,155 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include topmenu-pc();
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+// aside
+aside {
+    @include sidemenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include sidemenu-pc();
+    }
+}
+
+//section
+section.complete {
+    @include wrapper();
+
+    width: 100%;
+    margin: 100px auto;
+
+    div.result {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 70px;
+        padding-bottom: 100px;
+
+        div.logo {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            padding-top: 10px;
+            text-align: center;
+            
+            font: {
+                family: $font-serif;
+                size: 1.4em;
+                weight: 300;
+            }
+
+            @include responsive(tablet-size) {
+                font-size: 1.8em;
+            }
+        }
+        
+        div.flexbox {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $color-white;
+            border: 1px solid $color-border;
+            border-radius: 10px;
+
+            @include responsive(tablet-size) {
+                width: 450px;
+            }
+
+            div.row {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px 20px;
+
+                span {
+                    width: 35%;
+                    text-align: left;
+                    font-weight: 500;
+                }
+
+                input {
+                    width: 65%;
+                    background-color: transparent;
+                    border: none;
+                    text-align: right;
+                    color: $color-main;
+                    
+                    font: {
+                        family: $font-sans;
+                        size: 1em;
+                        weight: 600;
+                    }
+                }
+
+                &:first-child {
+                    padding-top: 20px;
+                }
+
+                &:nth-child(5) {
+                    padding-bottom: 20px;
+                }
+
+                &:last-child {
+                    background-color: $color-main;
+                    border-radius: 0 0 10px 10px;
+
+                    a {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        text-align: center;
+                        color: $color-white;
+
+                        i {
+                            width: 5%;
+
+                            &:first-child {
+                                color: $color-main;
+                            }
+                        }
+                        
+                        span {
+                            width: 90%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}

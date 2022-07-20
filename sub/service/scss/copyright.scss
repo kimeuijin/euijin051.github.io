@@ -1,0 +1,69 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include topmenu-pc();
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+// aside
+aside {
+    @include sidemenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include sidemenu-pc();
+    }
+}
+
+//section
+section {
+    @include wrapper();
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    > h2 {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $color-main;
+    }
+    
+    p {
+        text-align: justify;
+        margin-top: 20px;
+        color: $color-main;
+        opacity: 0.8;
+
+        a {
+            display: inline;
+            text-decoration: underline;
+            color: blue;
+            &:hover {
+                color: blue;
+            }
+        }
+    }
+}
+
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}

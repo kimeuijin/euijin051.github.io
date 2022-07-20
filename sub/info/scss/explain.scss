@@ -1,0 +1,93 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+    @include responsive(tablet-size) {
+        @include topmenu-pc();
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+// aside
+aside {
+    @include sidemenu-mobile();
+    @include responsive(tablet-size) {
+        @include sidemenu-pc();
+    }
+}
+
+//section
+section {
+    @include wrapper();
+    
+    h2 {
+        text-align: center;
+        margin: 50px 0;
+        font-size: 1.875em;
+    }
+
+    ul.ex1{
+        width: 100%;
+        li{
+            div.exp-txt1{
+                display: flex;
+                // word-break: break-all;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 20px 10px;
+                border-bottom: 1px solid $color-border;
+                .num{
+                    width: 40%;
+                }
+                .time{
+                    width: 60%;
+    
+                }
+                @include responsive(pc-size) {
+                    .num{
+                        width: 30%;
+                    }
+                    .time{
+                        width: 70%;
+                    }
+                }
+            }
+        }
+        
+        
+
+    }
+    .ex2{
+        padding: 60px 0;
+   
+        .exp-txt2{
+            li{
+                text-align: start;
+                list-style: outside;
+                padding-bottom: 5px
+            }
+        }
+    }
+}
+
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="H.Kim">
+    <meta name="title" property="og:title" content="경복궁">
+    <meta name="decription" property="og:description" content="경복궁 온라인 예약·예매">
+    <meta name="images" property="og:image" content="./../../images/meta-image.jpg">
+    <meta name="type" property="og:type" content="article">
+    <link rel="stylesheet" href="./css/booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./../../images/favicon.ico" type="image/x-icon">
+    <title>온라인 예약·예매</title>
+</head>
+<body>
+    <header>
+        <div class="header-mobile">
+            <div class="header-flex-box">
+                <h1 class="logo">
+                    <a href="./../../index.html"><img src="./../../images/logo_wt.svg" alt="main-logo"></a>
+                </h1> <!-- logo -->
+                <div class="hamburger">
+                    <input type="checkbox" id="menu">
+                    <label for="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div> <!-- hamburger -->
+            </div> <!-- header-flex-box -->
+            
+            <div class="mobilemenu">
+                <ul class="mobile-gnb">
+                    <li class="mobilemenu-home mobilemenu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li> <!-- mobilemenu-home -->
+    
+                    <li class="mobilemenu-history mobilemenu">
+                        <button class="accordion">역사 알기</button>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html">복원사업에 관해</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-history -->
+                    
+                    <li class="mobilemenu-map mobilemenu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li> <!-- mobilemenu-map -->
+                    
+                    <li class="mobilemenu-info mobilemenu">
+                        <button class="accordion">관람 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-info -->
+    
+                    <li class="mobilemenu-event mobilemenu">
+                        <button class="accordion">행사 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html">생과방</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-event -->
+                    
+                    <li class="mobilemenu-notice mobilemenu">
+                        <button class="accordion">소식 알림</button>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- mobilemenu-notice -->
+                    
+                    <li class="mobilemenu-box">
+                        <ul class="login-flex-box">
+                            <li class="mobilemenu-login mobilemenu">
+                                <a href="login.html">로그인</a>
+                            </li> <!-- mobilemenu-login -->
+                            
+                            <li class="mobilemenu-mypage mobilemenu">
+                                <a href="mypage.html">내 정보</a>
+                            </li> <!-- mobilemenu-mypage -->
+                            
+                            <li class="mobilemenu-reservation mobilemenu">
+                                <a href="booking.html">예약·예매</a>
+                            </li> <!-- mobilemenu-reservation -->
+                        </ul> <!-- login-flex-box -->
+                    </li> <!-- mobilemenu-box -->
+                </ul> <!-- mobile-gnb -->
+            </div> <!-- mobilemenu -->
+        </div> <!-- header-mobile -->
+        <script src="./js/mobile-menu.js"></script>
+        
+        <ul class="topmenu"> <!-- 현재 페이지 li.submenu 클래스에 selected 삽입 -->
+            <li class="submenu selected">
+                <a href="booking.html">온라인 예약·예매</a>
+            </li>
+            <li class="submenu">
+                <a href="booking-check.html">온라인 예약·예매 확인</a>
+            </li>
+            <li class="submenu"></li>
+        </ul> <!-- topmenu -->
+    </header>
+
+    <main>
+        <aside>
+            <div class="sidemenu">
+                <h1 class="header-logo">
+                    <a href="./../../index.html"><img src="./../../images/logo.svg" alt="main-logo"></a>
+                </h1>
+                <ul class="gnb"> <!-- 현재 페이지 li.menu 클래스에 selected 삽입 -->
+                    <li class="sidemenu-home menu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li> <!-- sidemenu-home -->
+    
+                    <li class="sidemenu-history menu">
+                        <a href="./../history/history.html">역사 알기</a>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html">복원사업에 관해</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-history -->
+    
+                    <li class="sidemenu-map menu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li> <!-- sidemenu-map -->
+    
+                    <li class="sidemenu-info menu">
+                        <a href="./../info/time-price.html">관람 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-info -->
+    
+                    <li class="sidemenu-event menu">
+                        <a href="./../event/alternating.html">행사 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html">생과방</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-event -->
+    
+                    <li class="sidemenu-notice menu">
+                        <a href="./../notice/notice.html">소식 알림</a>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul> <!-- small-menu -->
+                    </li> <!-- sidemenu-notice -->
+    
+                    <li class="sidemenu-login menu">
+                        <a href="login.html">로그인</a>
+                    </li> <!-- sidemenu-login -->
+    
+                    <li class="sidemenu-mypage menu">
+                        <a href="mypage.html">내 정보</a>
+                    </li> <!-- sidemenu-mypage -->
+    
+                    <li class="sidemenu-reservation menu selected">
+                        <a href="booking.html">예약·예매</a>
+                    </li> <!-- sidemenu-reservation -->
+                </ul> <!-- gnb -->
+            </div> <!-- sidemenu -->
+        </aside>
+
+        <section class="booking">
+			<div>
+                <h2 class="booking-title">온라인 예약·예매</h2>
+                <a href="booking-check.html"><i class="fa-solid fa-angle-left"></i>완료한 예약·예매 확인하러 가기<i class="fa-solid fa-angle-right"></i></a>
+            </div>
+			<div class="booking-form">
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="calendar option">
+                            <div class="calendar-title">
+                                <div class="btn" onclick="handleWeek(-1)">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </div>
+                                <div id="year"></div>
+                                <div id="month"></div>
+                                <div class="btn" onclick="handleWeek(1)">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                            </div> <!-- calendar-title -->
+                            <div id="container">
+                                <div id="weekDic"></div>
+                                <div id="calendar"></div>
+                            </div> <!-- container -->
+                        </div> <!-- calendar-->
+                        <div class="event-list option list">
+                            <div class="subtitle">
+                                <h3>행사 선택</h3>
+                                <h3>예약 가능 기간</h3>
+                            </div> <!-- subtitle -->
+                            <ul>
+                                <li class="event">
+                                    <input type="radio" name="event-pick" id="event01">
+                                    <label for="event01"><span>칠궁 특별관람</span><span>2022.03.06~2022.05.29</span></label>
+                                </li>
+                                <li class="event">
+                                    <input type="radio" name="event-pick" id="event02">
+                                    <label for="event02"><span>경회루 특별관람</span><span>2022.03.21~2022.05.29</span></label>
+                                </li>
+                                <li class="event">
+                                    <input type="radio" name="event-pick" id="event03">
+                                    <label for="event03"><span>생과방</span><span>2022.03.21~2022.05.29</span></label>
+                                </li>
+                                <li class="event">
+                                    <input type="radio" name="event-pick" id="event04">
+                                    <label for="event04"><span>수라간 시식공감</span><span>2022.03.24~2022.05.29</span></label>
+                                </li>
+                                <li class="event">
+                                    <input type="radio" name="event-pick" id="event05">
+                                    <label for="event05"><span>경복궁 별빛야행</span><span>2022.03.28~2022.05.29</span></label>
+                                </li>
+                                <li class="event">
+                                    <input type="radio" name="event-pick" id="event06">
+                                    <label for="event06"><span>경복궁 야간관람</span><span>2022.04.01~2022.05.29</span></label>
+                                </li>
+                            </ul>
+                        </div> <!-- event-list -->
+                    </div> <!-- row -->
+                    <div class="time-list option list">
+                        <div class="subtitle">
+                            <h3>시간 선택</h3>
+                        </div> <!-- subtitle -->
+                        <ul>
+                            <li class="time">
+                                <input type="radio" name="time-pick" id="time09">
+                                <label for="time09"><span>09:00</span><span>예약 가능</span></label>
+                            </li>
+                            <li class="time">
+                                <input type="radio" name="time-pick" id="time10">
+                                <label for="time10"><span>10:00</span><span>예약 가능</span></label>
+                            </li>
+                            <li class="time">
+                                <input type="radio" name="time-pick" id="time11">
+                                <label for="time11"><span>11:00</span><span>예약 가능</span></label>
+                            </li>
+                            <li class="time">
+                                <input type="radio" name="time-pick" id="time12">
+                                <label for="time12"><span>12:00</span><span>예약 가능</span></label>
+                            </li>
+                            <li class="time">
+                                <input type="radio" name="time-pick" id="time13">
+                                <label for="time13"><span>13:00</span><span>예약 가능</span></label>
+                            </li>
+                            <li class="time">
+                                <input type="radio" name="time-pick" id="time14">
+                                <label for="time14"><span>14:00</span><span>예약 가능</span></label>
+                            </li>
+                            <li class="time">
+                                <input type="radio" name="time-pick" id="time15">
+                                <label for="time15"><span>15:00</span><span>예약 가능</span></label>
+                            </li>
+                            <li class="time">
+                                <input type="radio" name="time-pick" id="time16">
+                                <label for="time16"><span>16:00</span><span>예약 가능</span></label>
+                            </li>
+                            <li class="time">
+                                <input type="radio" name="time-pick" id="time17">
+                                <label for="time17"><span>17:00</span><span>예약 가능</span></label>
+                            </li>
+                            <li class="time">
+                                <input type="radio" name="time-pick" id="time18">
+                                <label for="time18"><span>18:00</span><span>예약 가능</span></label>
+                            </li>
+                        </ul>
+                    </div> <!-- time-list -->
+                    <div class="personnel-list option">
+                        <div class="subtitle">
+                            <h3>인원 선택</h3>
+                        </div> <!-- subtitle -->
+                        <div class="personnel-flex-box">
+                            <div class="desc">
+                                <p>· 무료 관람 대상자</p>
+                                <p>만 6세 이하</p>
+                                <p>만65세 이상 ('14.10.1부터 시행)</p>
+                                <p>한복 착용자</p>
+                                <p>매월 마지막 수요일 [문화가 있는 날]</p>
+                            </div> <!-- desc -->
+                            <div class="count">
+                                <div class="adult age">
+                                    <div class="label">
+                                        <span>일반 (무료 관람 대상자 외)</span>
+                                        <span>3,000원</span>
+                                    </div> <!-- label -->
+                                    <div class="personnel-count">
+                                        <input type="radio" name="adult" id="adult-0" checked>
+                                        <label for="adult-0">0인</label>
+                                        <input type="radio" name="adult" id="adult-1">
+                                        <label for="adult-1">1인</label>
+                                        <input type="radio" name="adult" id="adult-2">
+                                        <label for="adult-2">2인</label>
+                                        <input type="radio" name="adult" id="adult-3">
+                                        <label for="adult-3">3인</label>
+                                        <input type="radio" name="adult" id="adult-4">
+                                        <label for="adult-4">4인</label>
+                                    </div> <!-- personnel-count -->
+                                </div> <!-- adult -->
+                                <div class="foreign-adult age">
+                                    <div class="label">
+                                        <span>외국인 - 대인 (만 19세~만 64세)</span>
+                                        <span>3,000원</span>
+                                    </div> <!-- label -->
+                                    <div class="personnel-count">
+                                        <input type="radio" name="foreign-adult" id="foreign-adult-0" checked>
+                                        <label for="foreign-adult-0">0인</label>
+                                        <input type="radio" name="foreign-adult" id="foreign-adult-1">
+                                        <label for="foreign-adult-1">1인</label>
+                                        <input type="radio" name="foreign-adult" id="foreign-adult-2">
+                                        <label for="foreign-adult-2">2인</label>
+                                        <input type="radio" name="foreign-adult" id="foreign-adult-3">
+                                        <label for="foreign-adult-3">3인</label>
+                                        <input type="radio" name="foreign-adult" id="foreign-adult-4">
+                                        <label for="foreign-adult-4">4인</label>
+                                    </div> <!-- personnel-count -->
+                                </div> <!-- foreign-adult -->
+                                <div class="foreign-kid age">
+                                    <div class="label">
+                                        <span>외국인 - 소인 (만 7세~만 18세)</span>
+                                        <span>1,500원</span>
+                                    </div> <!-- label -->
+                                    <div class="personnel-count">
+                                        <input type="radio" name="foreign-kid" id="foreign-kid-0" checked>
+                                        <label for="foreign-kid-0">0인</label>
+                                        <input type="radio" name="foreign-kid" id="foreign-kid-1">
+                                        <label for="foreign-kid-1">1인</label>
+                                        <input type="radio" name="foreign-kid" id="foreign-kid-2">
+                                        <label for="foreign-kid-2">2인</label>
+                                        <input type="radio" name="foreign-kid" id="foreign-kid-3">
+                                        <label for="foreign-kid-3">3인</label>
+                                        <input type="radio" name="foreign-kid" id="foreign-kid-4">
+                                        <label for="foreign-kid-4">4인</label>
+                                    </div> <!-- personnel-count -->
+                                </div> <!-- foreign-kid -->
+                            </div> <!-- count -->
+                        </div> <!-- personnel-flex-box -->
+                    </div> <!-- personnel-list -->
+                    <div class="button-flex-box">
+                        <!-- <button type="submit"> -->
+                        <button type="button" onclick="location.href='booking-complete.html'">
+                            <span>총 금액 0원</span>
+                            <span> | 결제 </span>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div> <!-- button-flex-box -->
+                </form>
+			</div> <!-- booking-form -->
+		</section> <!-- booking -->
+        <script src="./js/calendar.js"></script>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="policy">
+                <ul>
+                    <li><a href="./../service/privacy.html">개인정보처리방침</a></li>
+                    <li><a href="./../service/copyright.html">저작권정책</a></li>
+                    <li><a href="https://www.cha.go.kr/cop/bbs/selectBoardNameCheck.do?bbsId=BBSMSTR_1049&checkType=regist" target="_blank">개인정보침해신고센터</a></li>
+                </ul>
+            </div> <!-- policy -->
+            
+            <div class="copyright">
+                <div class="footer-logo">
+                    <img src="./../../images/logo.svg" alt="footer-logo">
+                </div>
+                <div class="contact">
+                    <p>문화재청 경복궁</p>
+                    <p>우)03045 서울특별시 종로구 사직로 161<br>전화번호 (02) 3700-3900 팩스 (02) 3700-3909</p>
+                    <p>COPYRIGHT 2022 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div> <!-- copyright -->
+        </div> <!-- wrapper -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" property="og:title" content="경복궁">
+    <meta name="images" property="og:image" content="./../../images/meta-image.jpg">
+    <meta name="description" property="og:description" content="주차 안내">
+    <meta name="type" property="og:type" content="article">
+    <meta name="Author" content="eui-j">
+    <link rel="stylesheet" href="./css/parking.css">
+    <link rel="shortcut icon" href="./../../images/favicon.ico" type="image/x-icon">
+    <title>주차 안내</title>
+</head>
+<body>
+    <header>
+        <div class="header-mobile">
+            <div class="header-flex-box">
+                <h1 class="logo">
+                    <a href="./../../index.html"><img src="./../../images/logo_wt.svg" alt="main-logo"></a>
+                </h1>
+                <!-- logo -->
+                <div class="hamburger">
+                    <input type="checkbox" id="menu">
+                    <label for="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <!-- hamburger -->
+            </div>
+            <!-- header-flex-box -->
+
+            <div class="mobilemenu">
+                <ul class="mobile-gnb">
+                    <li class="mobilemenu-home mobilemenu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li>
+                    <!-- mobilemenu-home -->
+
+                    <li class="mobilemenu-history mobilemenu">
+                        <button class="accordion">역사 알기</button>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html">복원사업에 관해</a></li>
+                        </ul>
+                        <!-- small-menu -->
+                    </li>
+                    <!-- mobilemenu-history -->
+
+                    <li class="mobilemenu-map mobilemenu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li>
+                    <!-- mobilemenu-map -->
+
+                    <li class="mobilemenu-info mobilemenu selected">
+                        <button class="accordion">관람 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./../info/parking.html" class="selected">주차 안내</a></li>
+                            <li><a href="./../info/explain.html">해설 안내</a></li>
+                        </ul>
+                        <!-- small-menu -->
+                    </li>
+                    <!-- mobilemenu-info -->
+
+                    <li class="mobilemenu-event mobilemenu">
+                        <button class="accordion">행사 안내</button>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html">생과방</a></li>
+                        </ul>
+                        <!-- small-menu -->
+                    </li>
+                    <!-- mobilemenu-event -->
+
+                    <li class="mobilemenu-notice mobilemenu">
+                        <button class="accordion">소식 알림</button>
+                        <ul class="small-menu">
+                            <li><a href="./../notice/notice.html">공지사항</a></li>
+                            <li><a href="./../notice/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../notice/inquire.html">1:1 문의하기</a></li>
+                        </ul>
+                        <!-- small-menu -->
+                    </li>
+                    <!-- mobilemenu-notice -->
+
+                    <li class="mobilemenu-box">
+                        <ul class="login-flex-box">
+                            <li class="mobilemenu-login mobilemenu">
+                                <a href="./../mypage/login.html">로그인</a>
+                            </li>
+                            <!-- mobilemenu-login -->
+    
+                            <li class="mobilemenu-mypage mobilemenu">
+                                <a href="./../mypage/mypage.html">내 정보</a>
+                            </li>
+                            <!-- mobilemenu-mypage -->
+    
+                            <li class="mobilemenu-reservation mobilemenu">
+                                <a href="./../mypage/booking.html">예약·예매</a>
+                            </li>
+                            <!-- mobilemenu-reservation -->
+                        </ul>
+                        <!-- login-flex-box -->
+                    </li>
+                    <!-- mobilemenu-box -->
+                </ul>
+                <!-- mobile-gnb -->
+            </div>
+            <!-- mobilemenu -->
+        </div>
+        <!-- header-mobile -->
+        <script src="./js/mobile-menu.js"></script>
+
+        <ul class="topmenu">
+            <!-- 현재 페이지 li.submenu 클래스에 selected 삽입 -->
+            <li class="submenu">
+                <a href="./../info/time-price.html">시간 및 요금</a>
+            </li>
+            <li class="submenu">
+                <a href="./../info/road.html">오시는 길</a>
+            </li>
+            <li class="submenu selected">
+                <a href="./../info/parking.html">주차 안내</a>
+            </li>
+            <li class="submenu">
+                <a href="./../info/explain.html">해설 안내</a>
+            </li>
+        </ul>
+        <!-- topmenu -->
+    </header>
+
+    <main>
+        <aside>
+            <div class="sidemenu">
+                <h1 class="header-logo">
+                    <a href="./../../index.html"><img src="./../../images/logo.svg" alt="main-logo"></a>
+                </h1>
+                <ul class="gnb">
+                    <!-- 현재 페이지 li.menu 클래스에 selected 삽입 -->
+                    <li class="sidemenu-home menu">
+                        <a href="./../../index.html">첫 화면</a>
+                    </li>
+                    <!-- sidemenu-home -->
+
+                    <li class="sidemenu-history menu">
+                        <a href="#">역사 알기</a>
+                        <ul class="small-menu">
+                            <li><a href="./../history/history.html">경복궁의 역사</a></li>
+                            <li><a href="./../history/converse.html">알고싶은 이야기</a></li>
+                            <li><a href="./../history/restoration.html">복원사업에 관해</a></li>
+                        </ul>
+                        <!-- small-menu -->
+                    </li>
+                    <!-- sidemenu-history -->
+
+                    <li class="sidemenu-map menu">
+                        <a href="./../map/map.html">경복궁 지도</a>
+                    </li>
+                    <!-- sidemenu-map -->
+
+                    <li class="sidemenu-info menu selected">
+                        <a href="./../info/time-price.html">관람 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../info/time-price.html">시간 및 요금</a></li>
+                            <li><a href="./../info/road.html">오시는 길</a></li>
+                            <li><a href="./parking.html" class="selected">주차 안내</a></li>
+                            <li><a href="./explain.html">해설 안내</a></li>
+                        </ul>
+                        <!-- small-menu -->
+                    </li>
+                    <!-- sidemenu-info -->
+
+                    <li class="sidemenu-event menu">
+                        <a href="./../event/alternating.html">행사 안내</a>
+                        <ul class="small-menu">
+                            <li><a href="./../event/alternating.html">수문장 교대의식</a></li>
+                            <li><a href="./../event/tasty.html">수라간 시식공감</a></li>
+                            <li><a href="./../event/star.html">별빛야행</a></li>
+                            <li><a href="./../event/saenggwabang.html">생과방</a></li>
+                        </ul>
+                        <!-- small-menu -->
+                    </li>
+                    <!-- sidemenu-event -->
+
+                    <li class="sidemenu-notice menu">
+                        <a href="./../mypage/notice.html">소식 알림</a>
+                        <ul class="small-menu">
+                            <li><a href="./../mypage/notice.html">공지사항</a></li>
+                            <li><a href="./../mypage/faq.html">자주하는 질문</a></li>
+                            <li><a href="./../mypage/inquire.html">1:1 문의하기</a></li>
+                        </ul>
+                        <!-- small-menu -->
+                    </li>
+                    <!-- sidemenu-notice -->
+
+                    <li class="sidemenu-login menu">
+                        <a href="./../mypage/login.html">로그인</a>
+                    </li>
+                    <!-- sidemenu-login -->
+
+                    <li class="sidemenu-mypage menu">
+                        <a href="./../mypage/mypage.html">내 정보</a>
+                    </li>
+                    <!-- sidemenu-mypage -->
+
+                    <li class="sidemenu-reservation menu">
+                        <a href="./../mypage/booking.html">예약·예매</a>
+                    </li>
+                    <!-- sidemenu-reservation -->
+                </ul>
+                <!-- gnb -->
+            </div>
+            <!-- sidemenu -->
+        </aside>
+
+        <section>
+            <h2>주차안내</h2>
+            <div class="map-pic">
+                <img src="./images/경복궁지도02.svg" alt="길안내 지도">
+                <p>광화문에서 삼청동 가는 길 초입 좌측편에 위치</p>
+            </div>
+            <div class="parking-price">
+                <table id="pk-price">
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>기본(2시간)</th>
+                            <th>초과요금(매 10분)</th>
+                            <th>회전시간(30분)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>소형차</td>
+                            <td>3,000원</td>
+                            <td>800원</td>
+                            <td>무료</td>
+                        </tr>
+                        <tr>
+                            <td>중/대형</td>
+                            <td>5,000원</td>
+                            <td>800원</td>
+                            <td>무료</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>주차장 운영시간: 06:00 ~ 23:00</p>
+            </div>
+            <div class="parking-discount">
+                <table id="pk-discount">
+                    <thead>
+                        <tr>
+                            <th>감면(80%)</th>
+                            <th>감면(50%)</th>
+                            <th>감면(30%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="dis">
+                                <div class="dis-hello">
+                                    - 장애인 차량 <br>
+                                    - 국가유공자 차량
+                                </div>
+                            </td>
+                            <td class="dis">
+                                <div class="dis-hi">
+                                    - 경승용차(1,000cc 이하) <br>
+                                    - 저공해자동차(하이브리드차 포함)<br>
+                                    - 다자녀가족 차량(3자녀 이상)
+                                </div>
+                            </td>
+                            <td>- 다자녀가족 차량(2자녀)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                국가에서 발급한 증명서 또는 확인서류
+                                (복지카드, 유공자증 등)를<br> 지참하고 관련
+                                식별표지가 부착된 차량으로 본인이 차량에
+                                탑승한 경우 
+                            </td>
+                            <td colspan="2">
+                                다자녀가족임을 증명할 수 있는 
+                                서류(다자녀카드, 가족관계 등록부, <br>건강보험증 등)를 
+                                지참하고 신분증과 함께 제시하는 경우
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>[요금감면: 중복 할인 불가]</p>
+            </div>
+        </section>
+    </main> 
+
+    <footer>
+        <div class="wrapper">
+            <div class="policy">
+                <ul>
+                    <li><a href="./../service/privacy.html">개인정보처리방침</a></li>
+                    <li><a href="./../service/copyright.html">저작권정책</a></li>
+                    <li><a href="https://www.cha.go.kr/cop/bbs/selectBoardNameCheck.do?bbsId=BBSMSTR_1049&checkType=regist" target="_blank">개인정보침해신고센터</a></li>
+                </ul>
+            </div>
+            <!-- policy -->
+
+            <div class="copyright">
+                <div class="footer-logo">
+                    <img src="./../../images/logo.svg" alt="footer-logo">
+                </div>
+                <div class="contact">
+                    <p>문화재청 경복궁</p>
+                    <p>우)03045 서울특별시 종로구 사직로 161<br>전화번호 (02) 3700-3900 팩스 (02) 3700-3909</p>
+                    <p>COPYRIGHT 2022 BY GYEONGBOKGUNG. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+            <!-- copyright -->
+        </div>
+        <!-- wrapper -->
+    </footer>
+</body>
+</html>

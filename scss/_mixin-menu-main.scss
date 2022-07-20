@@ -1,0 +1,89 @@
+@mixin menu-flex() {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin sidemenu-mobile() {
+    div.sidemenu {
+        display: none;
+    }
+}
+
+@mixin sidemenu-pc() {
+    background-color: $sidemenu-background;
+    
+    div.sidemenu {
+        display: block;
+        width: 200px;
+        height: 100%;
+        float: left;
+        // transform: translateY(-80px);
+        background-color: $sidemenu-background;
+
+        h1.header-logo {
+            padding: 10px 30px 25px 21px; 
+        }
+    
+        ul.gnb {
+            padding-left: 30px;
+    
+            li.menu {
+                padding: 10px 0;
+
+                font: {
+                    size: 1.1em;
+                    weight: 600;
+                }
+                
+                &::before {
+                    content:"";
+                    display: inline-block;
+                    height: 10px;
+                    width: 10px;
+                    background: url("./../images/icon-circle.svg") no-repeat center;
+                }
+                
+                &.selected::before {
+                    background: url("./../images/icon-circle_h.svg") no-repeat center;
+                }
+                
+                & > a {
+                    display: inline-block;
+                    padding-left: 10px;
+                    color: $sidemenu-black;
+                }
+    
+                ul.small-menu {
+                    margin-top: 5px;
+                    margin-bottom: 20px;
+                    padding-left: 24px;
+                    line-height: 1.4em;
+    
+                    li {
+                        font: {
+                            size: 0.9em;
+                            weight: 400;
+                        }
+                        
+                        a {
+                            display: inline-block;
+                            color: $sidemenu-gray;
+                            transition: color 0.3s ease, font-weight 0.3s ease;
+
+                            &:hover {
+                                color: $sidemenu-black;
+                                font-weight: 500;
+                            }
+
+                            &.selected {
+                                color: $sidemenu-black;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

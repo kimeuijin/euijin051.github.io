@@ -1,0 +1,172 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu-login.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+
+    @include responsive(tablet-size) {
+        padding-top: 13px;
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+//section
+section.login {
+    @include wrapper();
+
+    width: 100%;
+    margin: 150px auto;
+
+    div.logo {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    P {
+        padding-top: 10px;
+        text-align: center;
+        
+        font: {
+            family: $font-serif;
+            size: 1.4em;
+            weight: 300;
+        }
+
+        @include responsive(tablet-size) {
+            font-size: 1.8em;
+        }
+    }
+    
+    div.flexbox {
+        width: 100%;
+        margin: 40px auto;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include responsive(tablet-size) {
+            width: 400px;
+        }
+
+        form {
+            input {
+                width: 100%;
+                height: 35px;
+                margin: 5px 0;
+                padding-left: 10px;
+                border: 1px solid $color-border;
+                color: $color-main;
+    
+                font: {
+                    family: $font-sans;
+                    size: 1em;
+                }
+            }
+    
+            div.row {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                padding-bottom: 30px;
+    
+                button.find-btn {
+                    padding-top: 5px;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+    
+                    font: {
+                        family: $font-sans;
+                        size: 1em;
+                    }
+    
+                    &:last-child {
+                        margin-left: 30px;
+                        padding-right: 5px;
+                    }
+                }
+            }
+    
+            button.btn {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                height: 45px;
+                cursor: pointer;
+                
+                font: {
+                    family: $font-sans;
+                    size: 1em;
+                }
+                
+                i {
+                    width: 10%;
+                }
+                
+                &.login {
+                    background-color: $color-main;
+                    border: none;
+                    color: $color-white;
+    
+                    i:first-child {
+                        color: $color-main;
+                    }
+                }
+    
+                &.signup {
+                    background-color: transparent;
+                    border: 1px solid $color-border;
+                    color: $color-main;
+    
+                    & > span {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+    
+                        & > span:first-child {
+                            color: $color-border;
+                        }
+                    }
+    
+                    i:first-child {
+                        color: $color-background;
+                    }
+                }
+            }
+    
+            hr {
+                width: 100%;
+                height: 1px;
+                margin: 15px 0;
+                background-color: $color-main;
+                border: 0px;
+            }
+        }
+    }
+}
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}

@@ -1,0 +1,480 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu.scss";
+@import "./_mixin-line.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include topmenu-pc();
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+// aside
+aside {
+    @include sidemenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include sidemenu-pc();
+    }
+}
+
+//section
+section {
+    width: 100%;
+    h2 {
+        display: none;
+    }
+
+    .img-text {
+        margin-top: 50px;
+        position: relative;
+        margin-bottom: 55px;
+
+        .main-text {
+            text-align: right;
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translate(-10%, -50%);
+            color: white;
+            font-family: serif;
+
+            @include responsive(tablet-size) {
+                top: 50%;
+                right: 10%;
+            }
+
+            h3 {
+                font-size: 25px;
+                @include responsive(tablet-size) {
+                    font-size: 30px;
+                    margin-bottom: 30px;
+                }
+                @include responsive(pc-size) {
+                    font-size: 44px;
+                    margin-bottom: 74px;
+                }
+            }
+
+            p {
+                display: none;
+                @include responsive(tablet-size) {
+                    display: block;
+                    font: {
+                        size: 16px;
+                        family: $font-serif;
+                        weight: 100;
+                    }
+                }
+                @include responsive(pc-size) {
+                    font: {
+                        size: 21px;
+                        weight: 100;
+                    }
+                    line-height: 1.5em;
+                }
+            }
+
+            .person {
+                @include responsive(tablet-size) {
+                    margin-top: 15px;
+                }
+                @include responsive(pc-size) {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    .wrapper-box {
+        @include wrapper();
+        @include responsive(pc-size) {
+            width: 95%;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 90px;
+            
+            @include responsive(pc-size) {
+                flex-direction: row;
+                justify-content: space-between;         
+            }
+            
+            @include line-deco();
+            
+            .line-flex {
+                width: 19%;;
+            }
+    
+            
+            .info-text-mobile {
+                font-size: 18px;
+                line-height: 2em;
+                display: block;
+                @include responsive(tablet-size) {
+                    display: block;
+                }
+                @include responsive(pc-size) {
+                    display: none;
+                }
+            }
+            .info-text-pc {
+                font-size: 18px;
+                line-height: 2em;
+                display: none;
+                @include responsive(tablet-size) {
+                    display: none;
+                }
+                @include responsive(pc-size) {
+                    display: block;
+                    margin-top: 20px;
+                    width: 80%;
+                }
+            }
+        }
+    
+        .guide {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 90px;
+            
+            @include responsive(pc-size) {
+                flex-direction: row;
+                justify-content: space-between;  
+            }
+            
+            .line-flex {
+                @include line-deco();
+                width: 19%;
+            }
+            
+            .guide-info {
+                p {
+                    font-size: 18px;
+                    line-height: 2em;
+                }
+    
+                @include responsive(pc-size) {
+                    width: 80%;
+                    margin-top: 20px;
+                }
+    
+                .guide-flex {
+                    
+                    @include responsive(pc-size) {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 33px;
+                    }
+    
+                    .guide-box {
+                        background-color: #cec4b6;
+                        margin-bottom: 10px;
+    
+                        p {
+                            padding: 10px;
+                            @include responsive(pc-size) {
+                                padding: 0;
+                                width: 100%;
+                            }
+                        }
+    
+                        @include responsive(pc-size) {
+                            height: 280px;
+                            padding: 0 30px;
+                            text-align: center;
+                            padding-top: 30px;
+                            margin-bottom: 33px;
+                            text-align: center;
+                            padding-top: 30px;
+                        }
+                    }
+    
+                    .modal-one,
+                    .modal-two,
+                    .modal-three,
+                    .modal-four,
+                    .modal-five,
+                    .modal-six,
+                    .modal-seven,
+                    .modal-eight,
+                    .modal-nine,
+                    .modal-ten,
+                    .modal-elev,
+                    .modal-twel {
+                        height: 100%;
+                        width: 100%;
+                        display: none;
+                        position: fixed;
+                        z-index: 100;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: rgba(0, 0, 0, 0.5);
+    
+                        .modalBox {
+                            margin: 0 auto;
+                            position: relative;
+                            top: 20%;
+                            width: 350px;
+                            height: 460px;
+                            text-align: center;
+                            margin-top: 30px;
+                            background-color: #fffaf4;
+                            border-radius: 5%;
+                            padding: 35px;
+    
+                            h4 {
+                                font-size: 1.4em;
+                                margin-bottom: 15px;
+                            }
+        
+                            h5 {
+                                font-size: 1em;
+                                font-weight: 400;
+                                line-height: 1.6em;
+                                margin-bottom: 50px;
+                                text-align: left;
+                            }
+        
+                            .modal-flex {
+                                display: flex;
+                                flex-direction: column;
+                                text-align: left;
+        
+                                p {
+                                    line-height: 2.2em;
+                                    font-size: 0.9em;
+                                    margin: 0 auto 10px auto;
+                                }
+        
+                                .imgBox {
+                                    width: 50%;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .modal-three,
+                    .modal-five,
+                    .modal-six {
+                        .modalBox {
+                            height: 480px;
+    
+                            h5 {
+                                margin-bottom: 35px;
+                            }
+                        }
+                    }
+    
+                    .closeBtn {
+                        position: absolute;
+                        top: 20px;
+                        right: 45px;
+                        font-size: 30px;
+                        cursor: pointer;
+                        color: black;
+                    }
+    
+    
+                    .snack-list {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        
+                        @include responsive(pc-size) {
+                            align-items: center;
+                            width: 87%;
+                        }
+    
+                        div {
+                            width: 48%;
+                            margin-bottom: 40px;
+                            img {
+                                opacity: 60%;
+                                margin-bottom: 15px;
+                                cursor: pointer;
+                                &:hover {
+                                    opacity: 100%;
+                                    transform: scale(0.95);
+                                    transition: 0.1s ease-out;
+                                }
+                            }
+                            p {
+                                text-align: center;
+                                line-height: 1.3em;
+                            }
+                            .img-padding {
+                                margin-bottom: 16px;
+                            }
+    
+                            .little-text {
+                                display: block;
+                                text-align: center;
+                                font-size: 14px;
+                            }
+                            
+                            @include responsive(tablet-size) {
+                                width: 32%;
+                            }
+                            @include responsive(pc-size) {
+                                width: 15%;
+                            }
+                        }
+                    }
+                    
+                    .tea-list {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        
+                        @include responsive(pc-size) {
+                            align-items: center;
+                            width: 87%;
+                        }
+    
+                        div {
+                            width: 48%;
+                            margin-bottom: 40px;
+                            img {
+                                margin-bottom: 15px;
+                                opacity: 60% ;
+                                cursor: pointer;
+                                &:hover {
+                                    opacity: 100%;
+                                    transform: scale(0.95);
+                                    transition: 0.2s ease-out;
+                                }
+                            }
+                            p {
+                                text-align: center;
+                                line-height: 1.3em;
+                            }
+                            
+                            @include responsive(tablet-size) {
+                                width: 32%;
+                            }
+                            @include responsive(pc-size) {
+                                width: 15%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .operation {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 90px;
+            
+            @include responsive(pc-size) {
+                flex-direction: row;
+                justify-content: space-between;     
+            }
+            
+            
+            .line-flex {
+                @include line-deco();
+            }
+    
+            .operation-info {
+                .operation-term {
+                    margin-bottom: 40px;
+                    .operation-info-box {
+                        background-color: #cec4b6;
+                        padding: 10px;
+                        
+                        @include responsive(pc-size) {
+                            margin-bottom: 33px;
+                            height: 145px;
+                            padding: 0 45px;
+                            text-align: center;
+                            padding-top: 30px;
+                        }
+    
+                        p {
+                            width: 100%;
+                        }
+                    }
+    
+                    @include responsive(pc-size) {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;;
+                    }
+    
+                    .info-center {
+                        width: 80%;
+                    }
+                }
+    
+                @include responsive(pc-size) {
+                    width: 80%;
+                    margin-top: 20px;
+                }
+            }
+            p {
+                font-size: 18px;
+                line-height: 2em;
+    
+                @include responsive(pc-size) {
+                    width: 80%;
+                    margin-top: 20px;
+                }
+            }
+        }
+    
+        .participate {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 90px;
+            
+            @include responsive(pc-size) {
+                flex-direction: row;
+                justify-content: space-between;          
+            }
+            
+            
+            .line-flex {
+                @include line-deco();
+            }
+    
+            p {
+                font-size: 18px;
+                line-height: 2em;
+    
+                @include responsive(pc-size) {
+                    width: 80%;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}

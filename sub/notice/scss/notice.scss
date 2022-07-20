@@ -1,0 +1,143 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include topmenu-pc();
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+// aside
+aside {
+    @include sidemenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include sidemenu-pc();
+    }
+}
+
+//section
+section.notice {
+    @include wrapper();
+
+    width: 100%;
+    margin: 100px auto;
+
+    div > h2 {
+        padding-bottom: 20px;
+    }
+
+    div > table.bulletin {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 1px;
+        text-align: left;
+        line-height: 1.5;
+        border-top: 1px solid $color-main;
+        color: $color-main;
+
+        tr {
+            border-bottom: 1px solid $color-border;
+            
+            th {
+                width: 20%;
+                padding: 15px 10px;
+                font-weight: normal;
+                vertical-align: top;
+            }
+    
+            td {
+                width: 60%;
+                padding: 15px 10px;
+                vertical-align: top;
+    
+                &.date {
+                    width: 20%;
+                    text-align: right;
+                }
+            }
+
+            &:last-child {
+                border-bottom: 1px solid $color-main;
+            }
+        }
+    }
+
+    div.page {
+        width: 310px;
+        margin: 0 auto;
+        text-align: center; // div 사이즈 영역 안에서의 center
+        
+        ul.pagination {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 65px;
+
+            li {
+                text-align: center;
+
+                a {
+                    font-size: 1em;
+                    color: $color-main;
+                    line-height: 30px;
+
+                    &.num, &.arrow {
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        border-radius: 100%;
+
+                        &:hover {
+                            background-color: $color-main;
+                            color: $color-background;
+                        }
+
+                        &:active {
+                            background-color: $color-border;
+                            cursor: pointer;
+                        }
+                    }
+
+                    &.active {
+                        cursor: default;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        border: 1px solid $color-border;
+                        border-radius: 100%;
+                    }
+
+                    &:active {
+                        outline: none;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}

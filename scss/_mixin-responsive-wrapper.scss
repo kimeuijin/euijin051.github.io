@@ -1,0 +1,30 @@
+@mixin responsive($break) {
+    @if $break == mobile-size {
+        @media screen and (min-width: $break-mobile) {
+            @content;
+        }
+    }
+    
+    @else if $break == tablet-size {
+        @media screen and (min-width: $break-tablet) {
+            @content;
+        }
+    }
+    
+    @else if $break == pc-size {
+        @media screen and (min-width: $break-pc) {
+            @content;
+        }
+    }
+}
+
+@mixin wrapper() {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 7%;
+
+    @include responsive(pc-size) {
+        max-width: 1320px;
+        padding: 0;
+    }
+}

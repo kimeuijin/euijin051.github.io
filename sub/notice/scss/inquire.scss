@@ -1,0 +1,166 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include topmenu-pc();
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+// aside
+aside {
+    @include sidemenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include sidemenu-pc();
+    }
+}
+
+//section
+section.inquire {
+    @include wrapper();
+
+    width: 100%;
+    margin: 100px auto;
+
+    div > h2 {
+        padding-bottom: 20px;
+    }
+
+    div.inquire-form {
+        width: 100%;
+
+        form {
+            border-top: 1px solid $color-main;
+            
+            div.row {
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border-bottom: 1px solid $color-border;
+                
+                @include responsive(tablet-size) {
+                    flex-direction: row;
+                }
+                
+                &:nth-child(7) {
+                    border-bottom: 1px solid $color-main;
+                    
+                     div {
+                         display: flex;
+                         flex-direction: column;
+
+                         span {
+                             padding-top: 5px;
+                             font-size: 0.8em;
+                             color: $color-border;
+                         }
+                     }
+                }
+
+                span.title {
+                    width: 100%;
+                    word-break: keep-all;
+                    line-height: 35px;
+
+                    @include responsive(tablet-size) {
+                        width: 20%;
+                    }
+                }
+
+                div.radio-btn, & > input, & > textarea, div.file-btn {
+                    width: 100%;
+
+                    @include responsive(tablet-size) {
+                        width: 80%;
+                    }
+                }
+
+                div.radio-btn {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 35px;
+                    color: $color-main;
+
+                    @include responsive(tablet-size) {
+                        padding-left: 10px;
+
+                        div {
+                            width: 25%
+                        }
+                    }
+                }
+
+                input#userid, input#username, input#mail, input#title, textarea#inquire {
+                    height: 35px;
+                    padding-left: 10px;
+                    color: $color-main;
+
+                    font: {
+                        family: $font-sans;
+                        size: 1em;
+                    }
+                }
+
+                input#userid, input#username {
+                    background-color: $color-background;
+                    border: none;
+                }
+
+                input#mail, input#title, textarea#inquire {
+                    border: 1px solid $color-border;
+                }
+
+                textarea#inquire {
+                    height: 284px;
+                    padding-top: 8px;
+                    resize: none;
+                }
+            }
+
+            div.button-flex-box {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: 50px;
+    
+                button {
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+    
+                    font: {
+                        family: $font-sans;
+                        size: 1.1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}

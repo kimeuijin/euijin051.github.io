@@ -1,0 +1,199 @@
+@import "./../../../scss/_style.scss";
+@import "./../../../scss/_common.scss";
+@import "./../../../scss/_mixin-responsive-wrapper.scss";
+@import "./../../../scss/_mixin-sidemenu.scss";
+@import "./../../../scss/_mixin-footer.scss";
+@import "_mixin-topmenu.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+// header
+header {
+    @include topmenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include topmenu-pc();
+    }
+}
+
+// main
+main {
+    @include menu-flex();
+}
+
+// aside
+aside {
+    @include sidemenu-mobile();
+
+    @include responsive(tablet-size) {
+        @include sidemenu-pc();
+    }
+}
+
+//section
+section.main-sec {
+    @include wrapper();
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 100px;
+
+    @include responsive(pc-size) {
+        flex-direction: row;
+    }
+
+    section.des-1 {
+        position: relative;
+        width: 100%;
+
+        @include responsive(pc-size) {
+            width: 70%;
+            height: 0%;
+        }
+
+        .des-1-converse-image {
+            width: 100%;
+            
+            .des-1-image1 {
+                display: none;
+                background-color: #dfd4c2;
+
+                @include responsive(pc-size) {
+                    padding: 50px 5px;
+                    margin-right: 5%;
+                }
+                
+                img {
+                    width: 100%;
+
+                    @include responsive(pc-size) {
+                        height: 400px;
+                    }
+                }
+    
+                .des-1-text {
+                    font-size: 0.9em;
+                    transform: translateY(10px);
+                    padding-left: 10px;
+                    
+                    @include responsive(tablet-size) {
+                        font-size: 1.1em;
+                        transform: translateY(20px);
+                        padding-left: 15px;
+
+                    }
+
+                    @include responsive(pc-size) {
+                        transform: translateY(-30px);
+                        padding-left: 20px;
+                    }
+
+                    span {
+                        display:inline-block;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 2px;
+
+                        @include responsive(tablet-size) {
+                            width: 13px;
+                            height: 13px;
+                        }
+                    }
+                }
+            } // des-1-image1
+        } // des-1-converse-image
+    } // section.des-1
+    
+    section.des-2 {
+        width: 100%;
+        margin-top: 10px;
+
+        @include responsive(pc-size) {
+            width: 60%;
+            margin-top: 0px;
+        }
+
+        .css3-tab {
+            position: relative;
+
+            input[type='radio'] {
+                display: none;
+            }
+
+            .css3-tab-nav {
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+
+                label {
+                    display: table-cell;
+                    background-color: #fcfbfa;
+                    color: #999;
+                    padding: 15px;
+                    text-align: center;
+                    transition: all .3s ease 0s;
+
+                    &:hover {
+                        cursor: pointer;
+                        background: #333;
+                        color: $color-white;
+                        transition: all .3s ease 0s;
+                    }
+                }
+            }
+
+            .css3-tab-content {
+                overflow: hidden;
+                display: none;
+                text-align: justify;
+                padding: 25px 0;
+                background: #f2ece4;
+                clear: left;
+                box-sizing: border-box;
+            }
+
+            input[id='tabOne']:checked ~ .css3-tab-nav label[for='tabOne'] {
+                background: #333;
+                color: $color-white;
+                cursor: default;
+            }
+
+            input[id='tabOne']:checked ~ div.tab-one {
+                display: block;
+                // border-top: solid 3px #333;
+            }
+
+            input[id='tabTwo']:checked ~ .css3-tab-nav label[for='tabTwo'] {
+                background: #333;
+                color: $color-white;
+                cursor: default;
+            }
+
+            input[id='tabTwo']:checked ~ div.tab-two {
+                display: block;
+                // border-top: solid 3px #333;
+            }
+
+            input[id='tabThr']:checked ~ .css3-tab-nav label[for='tabThr'] {
+                background: #333;
+                color: $color-white;
+                cursor: default;
+            }
+
+            input[id='tabThr']:checked ~ div.tab-Thr {
+                display: block;
+                // border-top: solid 3px #333;
+            }
+        } // css3-tab
+    } // section.des-2
+} // section.main-sec
+
+
+// footer
+footer {
+    @include footer-mobile();
+
+    @include responsive(tablet-size) {
+        @include footer-pc();
+    }
+}
